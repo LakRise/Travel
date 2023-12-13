@@ -1,0 +1,12 @@
+.main-index.modal-opened {
+  &::before {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(45, 56, 63, 0.6);
+    content: "";
+  }
+}

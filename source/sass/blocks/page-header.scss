@@ -1,0 +1,394 @@
+@use "../variables.scss";
+@use "../mixins.scss" as *;
+
+.page-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  margin: 0 auto;
+  transition: background 0.2s;
+
+  @media (max-width: variables.$vp-1199) {
+    position: relative;
+    margin: 0;
+    padding: 20px 0;
+    background: variables.$color-primary-1;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    padding: 15px 0 13px;
+  }
+}
+
+.page-header.is-active {
+  @media (max-width: variables.$vp-1199) {
+    z-index: 3;
+    background: variables.$color-default-white;
+    color: variables.$color-default-black;
+  }
+}
+
+.page-header.is-active .page-header__button-burger {
+  @media (max-width: variables.$vp-1199) {
+    position: relative;
+    padding-left: 10px;
+    color: variables.$color-default-black;
+
+    &::before {
+      display: block;
+    }
+
+    &::after {
+      display: block;
+    }
+  }
+
+  @media (max-width: variables.$vp-767) {
+    padding-left: 0;
+
+    &::before {
+      left: -1px;
+      top: 12px;
+    }
+
+    &::after {
+      left: -1px;
+      top: 12px;
+    }
+  }
+}
+
+.page-header.is-active .page-header__button-burger svg {
+  @media (max-width: variables.$vp-1199) {
+    opacity: 0;
+    transition: opacity 0.1s;
+  }
+}
+
+.page-header.is-active .page-header__navigation {
+  @media (max-width: variables.$vp-1199) {
+    position: absolute;
+    z-index: 3;
+    top: calc(100% - 1px);
+    bottom: 0;
+    left: 0;
+    padding: 35px 45px 72px 45px;
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: fit-content;
+    background: variables.$color-default-white;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    padding: 17px 15px 53px 15px;
+  }
+}
+
+.page-header.is-active .page-header__menu {
+  @media (max-width: variables.$vp-1199) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 26px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    gap: 22px;
+  }
+}
+
+.page-header.is-active .page-header__menu-item {
+  @media (max-width: variables.$vp-1199) {
+    width: 100%;
+  }
+}
+
+.page-header.is-active .page-header__menu-link {
+  @media (max-width: variables.$vp-1199) {
+    margin: -3px 0 -3px -5px;
+    width: fit-content;
+    font-weight: 700;
+    letter-spacing: 0.64px;
+    color: variables.$color-default-black;
+    text-transform: uppercase;
+
+    &::before {
+      background: variables.$color-default-black;
+    }
+
+    @include focus {
+      box-shadow: inset 1px 1px variables.$color-default-black, inset -1px -1px variables.$color-default-black;
+    }
+  }
+
+  @media (max-width: variables.$vp-767) {
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.56px;
+  }
+}
+
+.page-header.is-active .page-header__logo {
+  @media (max-width: variables.$vp-1199) {
+    transform: translateX(-1px);
+    color: variables.$color-default-black;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    transform: translate(0);
+  }
+}
+
+.page-header.is-active .page-header__phone-link {
+  @media (max-width: variables.$vp-1199) {
+    padding-right: 10px;
+    color: variables.$color-default-black;
+
+    &:active {
+      color: variables.$color-primary-1;
+      opacity: 1;
+    }
+
+    &:active:hover:focus {
+      color: variables.$color-primary-1;
+      opacity: 1;
+    }
+
+    &--disabled {
+      color: variables.$color-primary-1;
+    }
+  }
+
+  @media (max-width: variables.$vp-767) {
+    padding-right: 0;
+  }
+}
+
+.page-header__wrapper {
+  margin: 0;
+  padding: 32px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: variables.$color-primary-1;
+  color: variables.$color-default-white;
+
+  @media (max-width: variables.$vp-1199) {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 10px;
+    background: transparent;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    grid-template-columns: 1fr 142px;
+    align-items: start;
+    row-gap: 9px;
+  }
+}
+
+.page-header__button-burger {
+  display: none;
+
+  @media (max-width: variables.$vp-1199) {
+    margin: 0;
+    padding: 8px 8px 8px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: transparent;
+    color: variables.$color-default-white;
+    border: none;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      left: 9px;
+      top: calc(50% - 1px);
+      transform: rotate(45deg);
+      display: none;
+      width: 28px;
+      height: 2px;
+      background: variables.$color-default-black;
+      content: "";
+      transition: all 0.2s;
+    }
+
+    &::after {
+      position: absolute;
+      left: 9px;
+      top: calc(50% - 1px);
+      transform: rotate(-45deg);
+      display: none;
+      width: 28px;
+      height: 2px;
+      background: variables.$color-default-black;
+      content: "";
+      transition: all 0.2s;
+    }
+  }
+
+  @media (max-width: variables.$vp-767) {
+    margin: 0;
+    padding: 0 8px 8px 0;
+  }
+}
+
+.page-header__logo {
+  margin: 0 9px 0 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 205px;
+  height: 62px;
+  color: variables.$color-default-white;
+  transition: color 0.2s, opacity 0.2s;
+
+  @media (max-width: variables.$vp-1199) {
+    margin: 0;
+    padding: 0 10px;
+    width: 226px;
+    height: 42px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    padding: 0;
+    grid-column: 2;
+    width: 142px;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &--disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
+
+.page-header__navigation {
+  padding: 0 25px 0 35px;
+  max-width: 67%;
+
+  @media (max-width: variables.$vp-1199) {
+    display: none;
+  }
+}
+
+.page-header__menu {
+  margin: -3px 0 -3px;
+  padding: 0 10px 0 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  column-gap: 21px;
+  row-gap: 24px;
+  list-style-type: none;
+
+  @media (max-width: variables.$vp-1199) {
+    padding: 0;
+  }
+}
+
+.page-header__menu-link {
+  position: relative;
+  margin: 0;
+  padding: 3px 5px;
+  display: flex;
+  max-width: 155px;
+  line-height: 16px;
+  color: variables.$color-default-white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background: variables.$color-default-white;
+    opacity: 0;
+    content: "";
+  }
+
+  @include hover {
+    &::before {
+      opacity: 1;
+      transition: opacity 0.1s;
+    }
+  }
+
+  @include focus {
+    outline: none;
+    box-shadow: inset 1px 1px variables.$color-default-white, inset -1px -1px variables.$color-default-white;
+  }
+
+  &:active:hover:focus {
+    &::before {
+      opacity: 0;
+      box-shadow: none;
+    }
+  }
+}
+
+.page-header__phone-link {
+  margin: 0;
+  padding: 14px 0 10px 10px;
+  display: flex;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 18px;
+  color: variables.$color-default-white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s, opacity 0.2s;
+
+  @media (max-width: variables.$vp-1199) {
+    font-size: 16px;
+    line-height: 16px;
+    justify-content: flex-end;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    margin: 0;
+    padding: 7px 0 0 7px;
+    font-size: 14px;
+    line-height: 14px;
+    grid-column: 2;
+  }
+
+  @include hover-focus {
+    color: variables.$color-secondary-1;
+  }
+
+  &:active {
+    color: variables.$color-default-white;
+    opacity: 0.5;
+  }
+
+  &:active:hover:focus {
+    color: variables.$color-default-white;
+    opacity: 0.5;
+  }
+
+  &--disabled {
+    color: variables.$color-default-white;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,436 @@
+@use "../variables.scss";
+
+.hero {
+  margin: 0 auto;
+  max-width: 1440px;
+
+  @media (max-width: variables.$vp-1199) {
+    transform: translateY(-1px);
+  }
+}
+
+.hero__swiper-background img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  height: 100%;
+
+  @media (max-width: variables.$vp-1199) {
+    object-fit: cover;
+    top: -81px;
+    min-width: 768px;
+    height: calc(100% + 82px);
+  }
+
+  @media (max-width: variables.$vp-767) {
+    top: -99px;
+    min-width: 320px;
+    height: calc(100% + 100px);
+  }
+}
+
+.hero__swiper {
+  overflow: visible;
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+.hero__swiper-slide {
+  padding: 200px 0 80px;
+  display: flex;
+  min-height: 800px;
+  max-width: 1440px;
+  background: variables.$color-primary-1;
+  color: variables.$color-default-white;
+  overflow: hidden;
+
+  @media (max-width: variables.$vp-1199) {
+    padding: 131px 0 180px;
+    max-width: 1199px;
+    min-height: 942px;
+
+    &--alt-padding {
+      padding-bottom: 121px;
+    }
+  }
+
+  @media (max-width: variables.$vp-767) {
+    padding: 41px 0 40px;
+    max-width: 767px;
+    min-height: 468px;
+  }
+}
+
+.hero__swiper-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__swiper-slide h3 {
+  margin: 0 0 24px;
+  max-width: 80%;
+  font-size: 77px;
+  font-weight: 800;
+  line-height: 77px;
+
+  @media (max-width: variables.$vp-1199) {
+    margin: 0 auto 13px;
+    width: 100%;
+    max-width: 860px;
+    font-size: 56px;
+    line-height: 56px;
+    text-align: center;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    margin-bottom: 15px;
+    max-width: 540px;
+    font-size: 26px;
+    line-height: 26px;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.hero__swiper-slide p {
+  margin: 0 0 36px;
+  max-width: 40%;
+  height: fit-content;
+  font-size: 17px;
+
+  @media (max-width: variables.$vp-1199) {
+    margin: 0 auto 27px;
+    max-width: 500px;
+    text-align: center;
+    line-height: 24px;
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (max-width: variables.$vp-767) {
+    margin: 0 auto 61px;
+    max-width: 540px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+.hero__swiper-slide--alt-padding p {
+  br {
+    display: none;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    br {
+      display: inline;
+    }
+  }
+}
+
+.hero__swiper-button {
+  margin: 0 0 10px;
+  width: 180px;
+  height: fit-content;
+
+  @media (max-width: variables.$vp-1199) {
+    margin: 0 auto 45px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    padding-top: 20px;
+    margin: 0 auto 10px;
+  }
+}
+
+.hero__features {
+  margin: auto 0 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  max-width: 50%;
+  list-style-type: none;
+
+  @media (max-width: variables.$vp-1199) {
+    display: none;
+  }
+}
+
+.hero__feature {
+  padding: 13px 19px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.hero__feature img {
+  position: relative;
+  z-index: 2;
+  transform: translateY(2px);
+}
+
+.hero__feature-text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.hero__slide-extra {
+  position: absolute;
+  bottom: 154px;
+  right: 120px;
+  max-width: 45%;
+
+  @media (max-width: variables.$vp-1199) {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin: 0 auto;
+    max-width: 860px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    display: none;
+  }
+}
+
+.hero__video-wrapper {
+  width: 482px;
+  height: 317px;
+
+  @media (max-width: variables.$vp-1199) {
+    width: 442px;
+    height: 300px;
+  }
+}
+
+.hero__video {
+  position: relative;
+  z-index: -2;
+  width: 482px;
+  height: 317px;
+
+  @media (max-width: variables.$vp-1199) {
+    width: 442px;
+    height: 300px;
+  }
+}
+
+.hero__video-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 482px;
+  height: 317px;
+  object-fit: contain;
+
+  @media (max-width: variables.$vp-1199) {
+    width: 442px;
+    height: 300px;
+  }
+}
+
+.hero__video-button {
+  position: absolute;
+  top: calc(50% - 28px);
+  left: calc(50% - 28px);
+  padding: 16px 18px 16px 24px;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: 1px solid variables.$color-default-white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  @include hover-focus {
+    border-color: variables.$color-secondary-1;
+  }
+
+  &:active {
+    border-color: variables.$color-secondary-1;
+    background: variables.$color-secondary-1;
+  }
+
+  &:active:hover:focus {
+    border-color: variables.$color-secondary-1;
+    background: variables.$color-secondary-1;
+  }
+
+  &:disabled {
+    border-color: rgba(2, 102, 193, 0.1);
+    pointer-events: none;
+  }
+}
+
+.hero__video-button svg {
+  stroke: variables.$color-default-white;
+  color: variables.$color-default-white;
+  transition: all 0.2s;
+}
+
+.hero__video-button:hover svg {
+  stroke: #000000;
+}
+
+.hero__video-button:focus-visible svg {
+  stroke: #000000;
+}
+
+.hero__video-button:active:hover:focus svg {
+  stroke: variables.$color-default-white;
+}
+
+.hero__video-button:disabled svg {
+  stroke: variables.$color-primary-1;
+  color: variables.$color-primary-1;
+}
+
+.hero__photo-wrapper {
+  width: 410px;
+  height: 459px;
+
+  @media (max-width: variables.$vp-1199) {
+    width: 442px;
+    height: 365px;
+  }
+}
+
+.hero__photo-wrapper img {
+  position: relative;
+  z-index: -1;
+  width: 410px;
+  height: 459px;
+
+  @media (max-width: variables.$vp-1199) {
+    width: 442px;
+    height: 365px;
+  }
+}
+
+.hero__audio-wrapper {
+  width: 340px;
+  height: 220px;
+}
+
+.hero__pagination.swiper-pagination {
+  position: absolute;
+  left: auto;
+  right: 118px;
+  bottom: 95px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: auto;
+  max-width: 30%;
+
+  @media (max-width: variables.$vp-1199) {
+    left: 0;
+    right: 0;
+    bottom: 37px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    bottom: 36px;
+    gap: 13px;
+  }
+}
+
+.hero__pagination-bullet {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  cursor: pointer;
+
+  &::before {
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: 1px solid variables.$color-default-white;
+    border-radius: 50%;
+    transition: all 0.2s;
+    content: "";
+  }
+
+  &::after {
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    margin: auto auto;
+    width: 14px;
+    height: 14px;
+    background: transparent;
+    display: none;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    content: "";
+  }
+
+  &--active {
+    &::before {
+      background: variables.$color-default-white;
+    }
+  }
+
+  @media (max-width: variables.$vp-767) {
+    &::before {
+      width: 8px;
+      height: 8px;
+    }
+
+    &::after {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  @include focus {
+    outline: none;
+
+    &::after {
+      display: block;
+    }
+  }
+
+  @include hover {
+    &::before {
+      background: #d9d9d9;
+    }
+  }
+
+  &:active {
+    &::before {
+      background: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &:active:hover:focus {
+    &::before {
+      background: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
