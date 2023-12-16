@@ -1,6 +1,10 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initMenu} from './modules/header-menu';
 import {setSwiperHero} from './modules/hero-swiper';
+import {setSwiperTours} from './modules/tours-swiper';
+import {setAudio} from './modules/audio-button';
+import {setVideo} from './modules/video-button';
+import {setSwiperCoaching} from './modules/coaching-swiper';
 
 // ---------------------------------
 
@@ -12,6 +16,10 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
   initMenu();
   setSwiperHero();
+  setVideo();
+  setAudio();
+  setSwiperTours();
+  setSwiperCoaching();
 
   // Modules
   // ---------------------------------

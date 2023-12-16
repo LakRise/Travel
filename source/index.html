@@ -71,7 +71,7 @@
                         <span class="hero__feature-text">Высокая сложность</span>
                       </li>
                     </ul>
-                    <div class="hero__slide-extra hero__video-wrapper">
+                    <div class="hero__slide-extra hero__video-wrapper" data-hero="video-wrapper">
                       <picture>
                         <source type="image/webp" media="(max-width: 1199px)" srcset="img/video-overlay-tablet-1x.webp 1x,
                         img/video-overlay-tablet-2x.webp 2x">
@@ -83,8 +83,8 @@
                         alt="">
                       </picture>
                       <iframe class="hero__video" src="" title="video" width="482" height="317"
-                        loading="lazy" tabindex="-1" data-video="video"></iframe>
-                      <button class="hero__video-button" type="button">
+                        loading="lazy" data-hero="video"></iframe>
+                      <button class="hero__video-button" type="button" data-hero="video-button">
                         <svg aria-hidden="true" focusable="false" width="12" height="22" fill="currentColor">
                           <use href="img/sprite.svg#play"></use>
                         </svg>
@@ -169,8 +169,19 @@
                         <span class="hero__feature-text">Лёгкая сложность</span>
                       </li>
                     </ul>
-                    <div class="hero__slide-extra hero__audio-wrapper">
-                      <iframe class="hero__audio" src="https://music.yandex.ru/iframe/album/25474374?dir=desc&activeTab=track-list" title="audio" width="340" height="220" loading="lazy"></iframe>
+                    <div class="hero__slide-extra hero__audio-wrapper" data-hero="audio-wrapper">
+                      <picture>
+                        <source type="image/webp" srcset="img/audio-overlay-desktop-1x.webp 1x,
+                        img/audio-overlay-desktop-2x.webp 2x">
+                        <img src="img/audio-overlay-desktop-1x.jpg" srcset="img/audio-overlay-desktop-2x.jpg 2x" width="340" height="220"
+                        alt="">
+                      </picture>
+                      <button class="hero__audio-button" type="button" data-hero="audio-button">
+                        <img src="img/svg/play.svg" with="47" height="47" alt="">
+                        <span class="visually-hidden">Запустить аудио.</span>
+                      </button>
+                      <iframe class="hero__audio" src="https://music.yandex.ru/iframe/album/25474374?dir=desc&activeTab=track-list" title="audio"
+                      width="340" height="220" loading="lazy" data-hero="audio"></iframe>
                     </div>
                     <div class="hero__swiper-background">
                       <picture>
@@ -195,303 +206,467 @@
             </div>
           </section>
         </div>
-        <section class="tours">
-          <div class="container">
-            <h2 class="tours__title">Ближайшие туры</h2>
-            <div class="tours__slider-button-wrapper">
-              <button class="tours__slider-button--left">
-                <span class="visually-hidden">Предыдущий слайд.</span>
-              </button>
-              <button class="tours__slider-button--right">
-                <span class="visually-hidden">Следующий слайд.</span>
-              </button>
+        <div class="main-index__background-1">
+          <div class="main-index__picture-wrapper">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/clouds-1-mobile-1x.webp 1x,
+              img/clouds-1-mobile-2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1199px)" srcset="img/clouds-1-tablet-1x.webp 1x,
+              img/clouds-1-tablet-2x.webp 2x">
+              <source type="image/webp" srcset="img/clouds-1-desktop-1x.webp 1x,
+              img/clouds-1-desktop-2x.webp 2x">
+              <source type="image/png" media="(max-width: 767px)" srcset="img/clouds-1-mobile-1x.png 1x,
+              img/clouds-1-mobile-2x.png 2x">
+              <source type="image/png" media="(max-width: 1199px)" srcset="img/clouds-1-tablet-1x.png 1x,
+              img/clouds-1-tablet-2x.png 2x">
+              <img src="img/clouds-1-desktop-1x.png" srcset="img/clouds-1-desktop-2x.png 2x" width="602" height="1630"
+              alt="">
+            </picture>
+          </div>
+          <section class="tours" data-test="tours">
+            <div class="container">
+              <div class="tours__header-wrapper">
+                <h2 class="tours__title" data-title="Ближайшие туры">Ближайшие туры</h2>
+                <div class="tours__swiper-button-wrapper">
+                  <button class="tours__swiper-button arrow-button" data-tours="previous">
+                    <span class="visually-hidden">Предыдущий слайд.</span>
+                    <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
+                      <use href="img/sprite.svg#left"></use>
+                    </svg>
+                  </button>
+                  <button class="tours__swiper-button arrow-button" data-tours="next">
+                    <span class="visually-hidden">Следующий слайд.</span>
+                    <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
+                      <use href="img/sprite.svg#right"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="tours__swiper swiper" data-swiper="tours">
+                <div class="swiper-wrapper">
+                  <div class="tours__item swiper-slide tours-card">
+                    <div class="tours-card__background">
+                      <picture>
+                        <source type="image/webp" srcset="img/tours-1-mobile-1x.webp 1x,
+                        img/tours-1-mobile-2x.webp 2x">
+                        <img src="img/tours-1-mobile-1x.jpg" srcset="img/tours-1-mobile-2x.jpg 2x" width="380" height="416"
+                        alt="Эльбрус.">
+                      </picture>
+                    </div>
+                    <div class="tours-card__info">
+                      <div class="tours-card__location">
+                        <img src="img/svg/pin.svg" width="16" height="16" alt="">
+                        <span class="tours-card__location-text">Кавказ</span>
+                      </div>
+                      <ul class="tours-card__duration">
+                        <li class="tours-card__duration-item">
+                          <img src="img/svg/sun.svg" width="20" height="20" alt="">
+                          <span class="tours-card__duration-text">4 дня</span>
+                        </li>
+                        <li class="tours-card__duration-item tours-card__duration-item--alt-padding">
+                          <img src="img/svg/moon.svg" width="18" height="18" alt="">
+                          <span class="tours-card__duration-text">3 ночи</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <h3 class="tours-card__title">Путешествие<br>вокруг Эльбруса</h3>
+                    <ul class="tours-card__features">
+                      <li class="tours-card__feature">
+                        <span class="tours-card__feature-label tours-card__feature-label--no-margin">Сложность:</span>
+                        <ul class="tours-card__feature-difficulty">
+                          <li class="tours-card__feature-difficulty-item">
+                            <img src="img/svg/star-filled.svg" width="16" height="16" alt="">
+                          </li>
+                          <li class="tours-card__feature-difficulty-item">
+                            <img src="img/svg/star-filled.svg" width="16" height="16" alt="">
+                          </li>
+                          <li class="tours-card__feature-difficulty-item">
+                            <img src="img/svg/star-filled.svg" width="16" height="16" alt="">
+                          </li>
+                          <li class="tours-card__feature-difficulty-item">
+                            <img src="img/svg/star-filled.svg" width="16" height="16" alt="">
+                          </li>
+                          <li class="tours-card__feature-difficulty-item">
+                            <img src="img/svg/star.svg" width="16" height="16" alt="">
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="tours-card__feature">
+                        <span class="tours-card__feature-label">Даты набора:</span>
+                        <span class="tours-card__feature-info">12.06–19.06</span>
+                      </li>
+                      <li class="tours-card__feature">
+                        <span class="tours-card__feature-label">Группа:</span>
+                        <span class="tours-card__feature-info">до 15 чел.</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tours__item swiper-slide tours-card">
+                    <div class="tours-card__background">
+                      <picture>
+                        <source type="image/webp" srcset="img/tours-1-mobile-1x.webp 1x,
+                        img/tours-1-mobile-2x.webp 2x">
+                        <img src="img/tours-1-mobile-1x.jpg" srcset="img/tours-1-mobile-2x.jpg 2x" width="380" height="416"
+                        alt="Эльбрус.">
+                      </picture>
+                    </div>
+                    <div class="tours-card__info">
+                      <div class="tours-card__location">
+                        <img src="img/svg/pin.svg" width="16" height="16" alt="">
+                        <span class="tours-card__location-text">Кавказ</span>
+                      </div>
+                      <ul class="tours-card__duration">
+                        <li class="tours-card__duration-item">
+                          <img src="img/svg/sun.svg" width="20" height="20" alt="">
+                          <span class="tours-card__duration-text">4 дня</span>
+                        </li>
+                        <li class="tours-card__duration-item tours-card__duration-item--alt-padding">
+                          <img src="img/svg/moon.svg" width="18" height="18" alt="">
+                          <span class="tours-card__duration-text">3 ночи</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <h3 class="tours-card__title">Путешествие<br>вокруг Эльбруса</h3>
+                    <ul class="tours-card__features">
+                      <li class="tours-card__feature">
+                        <span class="tours-card__feature-label tours-card__feature-label--no-margin">Сложность:</span>
+                        <ul class="tours-card__feature-difficulty">
+                          <li class="tours-card__feature-difficulty-item">
+                            <img src="img/svg/star-filled.svg" width="16" height="16" alt="">
+                          </li>
+                          <li class="tours-card__feature-difficulty-item">
+                            <img src="img/svg/star-filled.svg" width="16" height="16" alt="">
+                          </li>
+                          <li class="tours-card__feature-difficulty-item">
+                            <img src="img/svg/star-filled.svg" width="16" height="16" alt="">
+                          </li>
+                          <li class="tours-card__feature-difficulty-item">
+                            <img src="img/svg/star-filled.svg" width="16" height="16" alt="">
+                          </li>
+                          <li class="tours-card__feature-difficulty-item">
+                            <img src="img/svg/star.svg" width="16" height="16" alt="">
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="tours-card__feature">
+                        <span class="tours-card__feature-label">Даты набора:</span>
+                        <span class="tours-card__feature-info">12.06–19.06</span>
+                      </li>
+                      <li class="tours-card__feature">
+                        <span class="tours-card__feature-label">Группа:</span>
+                        <span class="tours-card__feature-info">до 15 чел.</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tours__item swiper-slide tours-card">
+                    <div class="tours-card__background">
+                      <picture>
+                        <source type="image/webp" srcset="img/tours-2-mobile-1x.webp 1x,
+                        img/tours-2-mobile-2x.webp 2x">
+                        <img src="img/tours-2-mobile-1x.jpg" srcset="img/tours-2-mobile-2x.jpg 2x" width="380" height="416" alt="Эльбрус.">
+                      </picture>
+                    </div>
+                    <div class="tours-card__info">
+                      <div class="tours-card__location">
+                        <img src="img/svg/pin.svg" width="16" height="16" alt="">
+                        <span class="tours-card__location-text">Алтай</span>
+                      </div>
+                      <ul class="tours-card__duration">
+                        <li class="tours-card__duration-item">
+                          <img src="img/svg/sun.svg" width="20" height="20" alt="">
+                          <span class="tours-card__duration-text">14 дней</span>
+                        </li>
+                        <li class="tours-card__duration-item tours-card__duration-item--alt-padding">
+                          <img src="img/svg/moon.svg" width="18" height="18" alt="">
+                          <span class="tours-card__duration-text">13 ночей</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <h3 class="tours-card__title">Путь к подножию<br>Белухи</h3>
+                    <ul class="tours-card__features">
+                      <li class="tours-card__feature">
+                        <span class="tours-card__feature-label tours-card__feature-label--no-margin">Сложность:</span>
+                        <ul class="tours-card__feature-difficulty">
+                          <li class="tours-card__feature-difficulty-item">
+                            <img src="img/svg/star-filled.svg" width="16" height="16" alt="">
+                          </li>
+                          <li class="tours-card__feature-difficulty-item">
+                            <img src="img/svg/star-filled.svg" width="16" height="16" alt="">
+                          </li>
+                          <li class="tours-card__feature-difficulty-item">
+                            <img src="img/svg/star-filled.svg" width="16" height="16" alt="">
+                          </li>
+                          <li class="tours-card__feature-difficulty-item">
+                            <img src="img/svg/star.svg" width="16" height="16" alt="">
+                          </li>
+                          <li class="tours-card__feature-difficulty-item">
+                            <img src="img/svg/star.svg" width="16" height="16" alt="">
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="tours-card__feature">
+                        <span class="tours-card__feature-label">Даты набора:</span>
+                        <span class="tours-card__feature-info">14.06–23.06</span>
+                      </li>
+                      <li class="tours-card__feature">
+                        <span class="tours-card__feature-label">Группа:</span>
+                        <span class="tours-card__feature-info">до 25 чел.</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tours__item swiper-slide tours-card">
+                    <div class="tours-card__background">
+                      <picture>
+                        <source type="image/webp" srcset="img/tours-3-desktop-1x.webp 1x,
+                        img/tours-3-desktop-2x.webp 2x">
+                        <img src="img/tours-3-desktop-1x.jpg" srcset="img/tours-3-desktop-2x.jpg 2x" width="380" height="416" alt="Эльбрус.">
+                      </picture>
+                    </div>
+                    <div class="tours-card__info">
+                      <div class="tours-card__location">
+                        <img src="img/svg/pin.svg" width="16" height="16" alt="">
+                        <span class="tours-card__location-text">Адыгея</span>
+                      </div>
+                      <ul class="tours-card__duration">
+                        <li class="tours-card__duration-item">
+                          <img src="img/svg/sun.svg" width="20" height="20" alt="">
+                          <span class="tours-card__duration-text">7 дней</span>
+                        </li>
+                        <li class="tours-card__duration-item tours-card__duration-item--alt-padding">
+                          <img src="img/svg/moon.svg" width="18" height="18" alt="">
+                          <span class="tours-card__duration-text">6 ночей</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <h3 class="tours-card__title">Через Фишт<br>к Чёрному морю<br>и обратно</h3>
+                    <ul class="tours-card__features">
+                      <li class="tours-card__feature">
+                        <span class="tours-card__feature-label tours-card__feature-label--no-margin">Сложность:</span>
+                        <ul class="tours-card__feature-difficulty">
+                          <li class="tours-card__feature-difficulty-item">
+                            <img src="img/svg/star-filled.svg" width="16" height="16" alt="">
+                          </li>
+                          <li class="tours-card__feature-difficulty-item">
+                            <img src="img/svg/star-filled.svg" width="16" height="16" alt="">
+                          </li>
+                          <li class="tours-card__feature-difficulty-item">
+                            <img src="img/svg/star-filled.svg" width="16" height="16" alt="">
+                          </li>
+                          <li class="tours-card__feature-difficulty-item">
+                            <img src="img/svg/star-filled.svg" width="16" height="16" alt="">
+                          </li>
+                          <li class="tours-card__feature-difficulty-item">
+                            <img src="img/svg/star.svg" width="16" height="16" alt="">
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="tours-card__feature">
+                        <span class="tours-card__feature-label">Даты набора:</span>
+                        <span class="tours-card__feature-info">15.07–19.07</span>
+                      </li>
+                      <li class="tours-card__feature">
+                        <span class="tours-card__feature-label">Группа:</span>
+                        <span class="tours-card__feature-info">до 22 чел.</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <a class="tours__link" href="#">
+                <span class="tours__link-text">Показать все туры</span>
+                <svg aria-hidden="true" focusable="false" width="9" height="14" fill="currentColor">
+                  <use href="img/sprite.svg#arrow-right"></use>
+                </svg>
+              </a>
             </div>
-            <ul class="tours__list">
-              <li class="tours__item tours-card">
-                <picture>
-                  <source type="image/webp" srcset="img/tours-1-mobile-1x.webp 1x,
-                  img/tours-1-mobile-2x.webp 2x">
-                  <img src="img/tours-1-mobile-1x.jpg" srcset="img/tours-1-mobile-2x.jpg 2x" width="380" height="416"
-                  alt="Эльбрус.">
-                </picture>
-                <div class="tours-card__location">
-                  <img src="img/svg/pin.svg" width="16" height="16" alt="">
-                  <span class="tours-card__location-text">Кавказ</span>
-                </div>
-                <ul class="tours-card__duration">
-                  <li class="tours-card__duration-item">
-                    <img src="img/svg/sun.svg" width="20" height="20" alt="">
-                    <span class="tours-card__duration-text">4 дня</span>
-                  </li>
-                  <li class="tours-card__duration-item">
-                    <img src="img/svg/moon.svg" width="20" height="20" alt="">
-                    <span class="tours-card__duration-text">3 ночи</span>
-                  </li>
-                </ul>
-                <h3 class="tours-card__title">Путешествие вокруг Эльбруса</h3>
-                <ul class="tours-card__features">
-                  <li class="tours-card__feature">
-                    <span class="tours-card__feature-label">Сложность:</span>
-                    <ul class="tours-card__feature-difficulty">
-                      <li class="tours-card__feature-difficulty-item tours-card__feature-difficulty-item--filled">
-                        <img src="img/svg/star.svg" width="16" height="16" alt="">
-                      </li>
-                      <li class="tours-card__feature-difficulty-item tours-card__feature-difficulty-item--filled">
-                        <img src="img/svg/star.svg" width="16" height="16" alt="">
-                      </li>
-                      <li class="tours-card__feature-difficulty-item tours-card__feature-difficulty-item--filled">
-                        <img src="img/svg/star.svg" width="16" height="16" alt="">
-                      </li>
-                      <li class="tours-card__feature-difficulty-item tours-card__feature-difficulty-item--filled">
-                        <img src="img/svg/star.svg" width="16" height="16" alt="">
-                      </li>
-                      <li class="tours-card__feature-difficulty-item">
-                        <img src="img/svg/star.svg" width="16" height="16" alt="">
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="tours-card__feature">
-                    <span class="tours-card__feature-label">Даты набора:</span>
-                    <span class="tours-card__feature-info">12.06–19.06</span>
-                  </li>
-                  <li class="tours-card__feature">
-                    <span class="tours-card__feature-label">Группа:</span>
-                    <span class="tours-card__feature-info">до 15 чел.</span>
-                  </li>
-                </ul>
-              </li>
-              <li class="tours__item tours-card">
-                <picture>
-                  <source type="image/webp" srcset="img/tours-2-mobile-1x.webp 1x,
-                  img/tours-2-mobile-2x.webp 2x">
-                  <img src="img/tours-2-mobile-1x.jpg" srcset="img/tours-2-mobile-2x.jpg 2x" width="380" height="416" alt="Эльбрус.">
-                </picture>
-                <div class="tours-card__location">
-                  <img src="img/svg/pin.svg" width="16" height="16" alt="">
-                  <span class="tours-card__location-text">Алтай</span>
-                </div>
-                <ul class="tours-card__duration">
-                  <li class="tours-card__duration-item">
-                    <img src="img/svg/sun.svg" width="20" height="20" alt="">
-                    <span class="tours-card__duration-text">14 дней</span>
-                  </li>
-                  <li class="tours-card__duration-item">
-                    <img src="img/svg/moon.svg" width="20" height="20" alt="">
-                    <span class="tours-card__duration-text">13 ночей</span>
-                  </li>
-                </ul>
-                <h3 class="tours-card__title">Путь к подножию Белухи</h3>
-                <ul class="tours-card__features">
-                  <li class="tours-card__feature">
-                    <span class="tours-card__feature-label">Сложность:</span>
-                    <ul class="tours-card__feature-difficulty">
-                      <li class="tours-card__feature-difficulty-item tours-card__feature-difficulty-item--filled">
-                        <img src="img/svg/star.svg" width="16" height="16" alt="">
-                      </li>
-                      <li class="tours-card__feature-difficulty-item tours-card__feature-difficulty-item--filled">
-                        <img src="img/svg/star.svg" width="16" height="16" alt="">
-                      </li>
-                      <li class="tours-card__feature-difficulty-item tours-card__feature-difficulty-item--filled">
-                        <img src="img/svg/star.svg" width="16" height="16" alt="">
-                      </li>
-                      <li class="tours-card__feature-difficulty-item">
-                        <img src="img/svg/star.svg" width="16" height="16" alt="">
-                      </li>
-                      <li class="tours-card__feature-difficulty-item">
-                        <img src="img/svg/star.svg" width="16" height="16" alt="">
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="tours-card__feature">
-                    <span class="tours-card__feature-label">Даты набора:</span>
-                    <span class="tours-card__feature-info">14.06–23.06</span>
-                  </li>
-                  <li class="tours-card__feature">
-                    <span class="tours-card__feature-label">Группа:</span>
-                    <span class="tours-card__feature-info">до 25 чел.</span>
-                  </li>
-                </ul>
-              </li>
-              <li class="tours__item tours-card">
-                <picture>
-                  <source type="image/webp" srcset="img/tours-3-desktop-1x.webp 1x,
-                  img/tours-3-desktop-2x.webp 2x">
-                  <img src="img/tours-3-desktop-1x.jpg" srcset="img/tours-3-desktop-2x.jpg 2x" width="380" height="416" alt="Эльбрус.">
-                </picture>
-                <div class="tours-card__location">
-                  <img src="img/svg/pin.svg" width="16" height="16" alt="">
-                  <span class="tours-card__location-text">Адыгея</span>
-                </div>
-                <ul class="tours-card__duration">
-                  <li class="tours-card__duration-item">
-                    <img src="img/svg/sun.svg" width="20" height="20" alt="">
-                    <span class="tours-card__duration-text">7 дней</span>
-                  </li>
-                  <li class="tours-card__duration-item">
-                    <img src="img/svg/moon.svg" width="20" height="20" alt="">
-                    <span class="tours-card__duration-text">6 ночей</span>
-                  </li>
-                </ul>
-                <h3 class="tours-card__title">Через Фишт к Чёрному морю и обратно</h3>
-                <ul class="tours-card__features">
-                  <li class="tours-card__feature">
-                    <span class="tours-card__feature-label">Сложность:</span>
-                    <ul class="tours-card__feature-difficulty">
-                      <li class="tours-card__feature-difficulty-item tours-card__feature-difficulty-item--filled">
-                        <img src="img/svg/star.svg" width="16" height="16" alt="">
-                      </li>
-                      <li class="tours-card__feature-difficulty-item tours-card__feature-difficulty-item--filled">
-                        <img src="img/svg/star.svg" width="16" height="16" alt="">
-                      </li>
-                      <li class="tours-card__feature-difficulty-item tours-card__feature-difficulty-item--filled">
-                        <img src="img/svg/star.svg" width="16" height="16" alt="">
-                      </li>
-                      <li class="tours-card__feature-difficulty-item tours-card__feature-difficulty-item--filled">
-                        <img src="img/svg/star.svg" width="16" height="16" alt="">
-                      </li>
-                      <li class="tours-card__feature-difficulty-item">
-                        <img src="img/svg/star.svg" width="16" height="16" alt="">
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="tours-card__feature">
-                    <span class="tours-card__feature-label">Даты набора:</span>
-                    <span class="tours-card__feature-info">15.07–19.07</span>
-                  </li>
-                  <li class="tours-card__feature">
-                    <span class="tours-card__feature-label">Группа:</span>
-                    <span class="tours-card__feature-info">до 22 чел.</span>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <a class="tous__link" href="#">
-              <span class="tours__link-text">Показать все туры</span>
-              <svg aria-hidden="true" focusable="false" width="12" height="6" fill="currentColor">
-                <use href="img/sprite.svg#arrow-right-small"></use>
-              </svg>
-            </a>
-          </div>
-        </section>
-        <section class="coaching">
-          <div class="container">
-            <h2>Обучение</h2>
-            <p>Обучение проводится квалифицированными специалистами, за плечами которых десятки пройденных маршрутов Кавказа, Крыма,
-            Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и других.</p>
-            <h3>Наши инструкторы</h3>
-            <ul class="coaching__coach-list">
-              <li class="coagin__coah-item coach-card">
-                <picure>
-                  <source type="image/webp" media="(max-width=1199px)" srcset="img/coaching-Alexandr-tablet-1x.webp 1x,
-                  img/coaching-Alexandr-tablet-2x.webp 2x">
-                  <source type="image/webp" srcset="img/coaching-Alexandr-desktop-1x.webp 1x,
-                  img/coaching-Alexandr-desktop-2x.webp 2x">
-                  <source type="image/jpg" media="(max-width=1199px)" srcset="img/coaching-Alexandr-tablet-1x.jpg 1x,
-                  img/coaching-Alexandr-tablet-2x.jpg 2x">
-                  <img src="img/coaching-Alexandr-desktop-1x.jpg" srcset="img/coaching-Alexandr-desktop-2x.jpg" width="255" height="200"
-                  alt="Инструктор Александр Прокофьев.">
-                </picure>
-                <div>
-                  <h4>Александр Прокофьев</h4>
-                  <a href="#">
-                    <svg aria-hidden="true" focusable="false" width="14" height="8" fill="currentColor">
-                      <use href="img/sprite.svg#vk"></use>
+          </section>
+          <section class="coaching" data-test="training">
+            <div class="container">
+              <h2 data-title="Обучение">Обучение</h2>
+              <p>Обучение проводится квалифицированными специалистами, за плечами которых десятки пройденных маршрутов Кавказа, Крыма,
+              Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и других.</p>
+              <div class="coaching__swiper-header">
+                <h3 class="coaching__swiper-title">Наши инструкторы</h3>
+                <div class="coaching__button-wrapper">
+                  <button class="coaching__swiper-button arrow-button" data-coaching="previous">
+                    <span class="visually-hidden">Предыдущий слайд.</span>
+                    <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
+                      <use href="img/sprite.svg#left"></use>
                     </svg>
-                    <span class="visually-hidden">Ссылка на контакт инструктора.</span>
-                  </a>
-                </div>
-                <p>Строгий и внимательный инструктор, весёлый и общительный человек. Любит природу.</p>
-              </li>
-              <li class="coagin__coah-item coach-card">
-                <picure>
-                  <source type="image/webp" media="(max-width=1199px)" srcset="img/coaching-Svetlana-tablet-1x.webp 1x,
-                  img/coaching-Svetlana-tablet-2x.webp 2x">
-                  <source type="image/webp" srcset="img/coaching-Svetlana-desktop-1x.webp 1x,
-                  img/coaching-Svetlana-desktop-2x.webp 2x">
-                  <source type="image/jpg" media="(max-width=1199px)" srcset="img/coaching-Svetlana-tablet-1x.jpg 1x,
-                  img/coaching-Svetlana-tablet-2x.jpg 2x">
-                  <img src="img/coaching-Svetlana-desktop-1x.jpg" srcset="img/coaching-Svetlana-desktop-2x.jpg" width="255"
-                  height="200" alt="Инструктор Светлана Афиногенова.">
-                </picure>
-                <div>
-                  <h4>Светлана Афиногенова</h4>
-                  <a href="#">
-                    <svg aria-hidden="true" focusable="false" width="14" height="8" fill="currentColor">
-                      <use href="img/sprite.svg#vk"></use>
+                  </button>
+                  <button class="coaching__swiper-button arrow-button" data-coaching="next">
+                    <span class="visually-hidden">Следующий слайд.</span>
+                    <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
+                      <use href="img/sprite.svg#right"></use>
                     </svg>
-                    <span class="visually-hidden">Ссылка на контакт инструктора.</span>
-                  </a>
+                  </button>
                 </div>
-                <p>Видеть мир вокруг, познавать его опасности, находить друг друга, становиться ближе, чувствовать — в этом назначение
-                жизни.</p>
-              </li>
-              <li class="coagin__coah-item coach-card">
-                <picure>
-                  <source type="image/webp" media="(max-width=767px)" srcset="img/coaching-Nadezhda-mobile-1x.webp 1x,
-                  img/coaching-Nadezhda-mobile-2x.webp 2x">
-                  <source type="image/webp" media="(max-width=1199px)" srcset="img/coaching-Nadezhda-tablet-1x.webp 1x,
-                  img/coaching-Nadezhda-tablet-2x.webp 2x">
-                  <source type="image/webp" srcset="img/coaching-Nadezhda-desktop-1x.webp 1x,
-                  img/coaching-Nadezhda-desktop-2x.webp 2x">
-                  <source type="image/jpg" media="(max-width=767px)" srcset="img/coaching-Nadezhda-mobile-1x.jpg 1x,
-                  img/coaching-Nadezhda-mobile-2x.jpg 2x">
-                  <source type="image/jpg" media="(max-width=1199px)" srcset="img/coaching-Nadezhda-tablet-1x.jpg 1x,
-                  img/coaching-Nadezhda-tablet-2x.jpg 2x">
-                  <img src="img/coaching-Nadezhda-desktop-1x.jpg" srcset="img/coaching-Nadezhda-desktop-2x.jpg" width="255"
-                  height="200" alt="Инструктор Надежда Колесниченко.">
-                </picure>
-                <div>
-                  <h4>Надежда Колесниченко</h4>
-                  <a href="#">
-                    <svg aria-hidden="true" focusable="false" width="14" height="8" fill="currentColor">
-                      <use href="img/sprite.svg#vk"></use>
-                    </svg>
-                    <span class="visually-hidden">Ссылка на контакт инструктора.</span>
-                  </a>
+              </div>
+              <div class="coaching__swiper swiper" data-swiper="coaching">
+                <div class="swiper-wrapper">
+                  <div class="coaching__swiper-item swiper-slide coach-card">
+                    <div class="coach-card__picture-wrapper">
+                      <picture>
+                        <source type="image/webp" srcset="img/coaching-Fyodor-desktop-1x.webp 1x,
+                        img/coaching-Fyodor-desktop-2x.webp 2x">
+                        <img src="img/coaching-Fyodor-desktop-1x.jpg" srcset="img/coaching-Fyodor-desktop-2x.jpg 2x" width="255" height="200"
+                        alt="Инструктор Федор Кайгородов.">
+                      </picture>
+                    </div>
+                    <div class="coach-card__title-wrapper">
+                      <h4>Федор<br>Кайгородов</h4>
+                      <a class="coach-card__link" href="#">
+                        <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
+                          <use href="img/sprite.svg#vk"></use>
+                        </svg>
+                        <span class="visually-hidden">Ссылка на контакт инструктора.</span>
+                      </a>
+                    </div>
+                    <p>Опыт походов: Ходит в походы с 2001 года. В России побывал в горных районах Хибины, Архыз, много путешествует
+                      по Европе.</p>
+                  </div>
+                  <div class="coaching__swiper-item swiper-slide coach-card">
+                    <div class="coach-card__picture-wrapper">
+                      <picture>
+                        <source type="image/webp" media="(max-width: 767px)" srcset="img/coaching-Alexandr-desktop-1x.webp 1x,
+                        img/coaching-Alexandr-desktop-2x.webp 2x">
+                        <source type="image/webp" media="(max-width: 1023px)" srcset="img/coaching-Alexandr-tablet-1x.webp 1x,
+                        img/coaching-Alexandr-tablet-2x.webp 2x">
+                        <source type="image/webp" srcset="img/coaching-Alexandr-desktop-1x.webp 1x,
+                        img/coaching-Alexandr-desktop-2x.webp 2x">
+                        <source type="image/jpg" media="(max-width: 767px)" srcset="img/coaching-Alexandr-desktop-1x.jpg 1x,
+                        img/coaching-Alexandr-desktop-2x.jpg 2x">
+                        <source type="image/jpg" media="(max-width: 1023px)" srcset="img/coaching-Alexandr-tablet-1x.jpg 1x,
+                        img/coaching-Alexandr-tablet-2x.jpg 2x">
+                        <img src="img/coaching-Alexandr-desktop-1x.jpg" srcset="img/coaching-Alexandr-desktop-2x.jpg 2x" width="268" height="200"
+                        alt="Инструктор Александр Прокофьев.">
+                      </picture>
+                    </div>
+                    <div class="coach-card__title-wrapper">
+                      <h4>Александр<br>Прокофьев</h4>
+                      <a class="coach-card__link" href="#">
+                        <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
+                          <use href="img/sprite.svg#vk"></use>
+                        </svg>
+                        <span class="visually-hidden">Ссылка на контакт инструктора.</span>
+                      </a>
+                    </div>
+                    <p>Строгий и внимательный инструктор, весёлый и общительный человек. Любит природу.</p>
+                  </div>
+                  <div class="coaching__swiper-item swiper-slide coach-card">
+                    <div class="coach-card__picture-wrapper">
+                      <picture>
+                        <source type="image/webp" media="(max-width: 767px)" srcset="img/coaching-Svetlana-desktop-1x.webp 1x,
+                        img/coaching-Svetlana-desktop-2x.webp 2x">
+                        <source type="image/webp" media="(max-width: 1023px)" srcset="img/coaching-Svetlana-tablet-1x.webp 1x,
+                        img/coaching-Svetlana-tablet-2x.webp 2x">
+                        <source type="image/webp" srcset="img/coaching-Svetlana-desktop-1x.webp 1x,
+                        img/coaching-Svetlana-desktop-2x.webp 2x">
+                        <source type="image/jpg" media="(max-width: 767px)" srcset="img/coaching-Svetlana-desktop-1x.jpg 1x,
+                        img/coaching-Svetlana-desktop-2x.jpg 2x">
+                        <source type="image/jpg" media="(max-width: 1023px)" srcset="img/coaching-Svetlana-tablet-1x.jpg 1x,
+                        img/coaching-Svetlana-tablet-2x.jpg 2x">
+                        <img src="img/coaching-Svetlana-desktop-1x.jpg" srcset="img/coaching-Svetlana-desktop-2x.jpg 2x" width="268"
+                        height="200" alt="Инструктор Светлана Афиногенова.">
+                      </picture>
+                    </div>
+                    <div class="coach-card__title-wrapper">
+                      <h4>Светлана<br>Афиногенова</h4>
+                      <a class="coach-card__link" href="#">
+                        <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
+                          <use href="img/sprite.svg#vk"></use>
+                        </svg>
+                        <span class="visually-hidden">Ссылка на контакт инструктора.</span>
+                      </a>
+                    </div>
+                    <p>Видеть мир вокруг, познавать его опасности, находить друг друга, становиться ближе, чувствовать — в этом назначение
+                    жизни.</p>
+                  </div>
+                  <div class="coaching__swiper-item swiper-slide coach-card">
+                    <div class="coach-card__picture-wrapper">
+                      <picture>
+                        <source type="image/webp" media="(max-width: 767px)" srcset="img/coaching-Nadezhda-mobile-1x.webp 1x,
+                        img/coaching-Nadezhda-mobile-2x.webp 2x">
+                        <source type="image/webp" media="(max-width: 1023px)" srcset="img/coaching-Nadezhda-tablet-1x.webp 1x,
+                        img/coaching-Nadezhda-tablet-2x.webp 2x">
+                        <source type="image/webp" srcset="img/coaching-Nadezhda-desktop-1x.webp 1x,
+                        img/coaching-Nadezhda-desktop-2x.webp 2x">
+                        <source type="image/jpg" media="(max-width: 767px)" srcset="img/coaching-Nadezhda-mobile-1x.jpg 1x,
+                        img/coaching-Nadezhda-mobile-2x.jpg 2x">
+                        <source type="image/jpg" media="(max-width: 1023px)" srcset="img/coaching-Nadezhda-tablet-1x.jpg 1x,
+                        img/coaching-Nadezhda-tablet-2x.jpg 2x">
+                        <img src="img/coaching-Nadezhda-desktop-1x.jpg" srcset="img/coaching-Nadezhda-desktop-2x.jpg 2x" width="268"
+                        height="200" alt="Инструктор Надежда Колесниченко.">
+                      </picture>
+                    </div>
+                    <div class="coach-card__title-wrapper">
+                      <h4>Надежда<br>Колесниченко</h4>
+                      <a class="coach-card__link" href="#">
+                        <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
+                          <use href="img/sprite.svg#vk"></use>
+                        </svg>
+                        <span class="visually-hidden">Ссылка на контакт инструктора.</span>
+                      </a>
+                    </div>
+                    <p>Участники говорят, что Надежда ответственная, приятная в общении, и в поездках с ней чувствуешь себя спокойно
+                    и уверенно.</p>
+                  </div>
+                  <div class="coaching__swiper-item swiper-slide coach-card">
+                    <div class="coach-card__picture-wrapper">
+                      <picture>
+                        <source type="image/webp" srcset="img/coaching-Fyodor-desktop-1x.webp 1x,
+                        img/coaching-Fyodor-desktop-2x.webp 2x">
+                        <img src="img/coaching-Fyodor-desktop-1x.jpg" srcset="img/coaching-Fyodor-desktop-2x.jpg 2x" width="255"
+                          height="200" alt="Инструктор Федор Кайгородов.">
+                      </picture>
+                    </div>
+                    <div class="coach-card__title-wrapper">
+                      <h4>Федор<br>Кайгородов</h4>
+                      <a class="coach-card__link" href="#">
+                        <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
+                          <use href="img/sprite.svg#vk"></use>
+                        </svg>
+                        <span class="visually-hidden">Ссылка на контакт инструктора.</span>
+                      </a>
+                    </div>
+                    <p>Опыт походов: Ходит в походы с 2001 года. В России побывал в горных районах Хибины, Архыз, много путешествует по Европе.</p>
+                  </div>
                 </div>
-                <p>Участники говорят, что Надежда ответственная, приятная в общении, и в поездках с ней чувствуешь себя спокойно
-                и уверенно.</p>
-              </li>
-              <li class="coagin__coah-item coach-card">
-                <picure>
-                  <source type="image/webp" srcset="img/coaching-Fyodor-desktop-1x.webp 1x,
-                  img/coaching-Fyodor-desktop-2x.webp 2x">
-                  <img src="img/coaching-Fyodor-desktop-1x.jpg" srcset="img/coaching-Fyodor-desktop-2x.jpg" width="255"
-                    height="200" alt="Инструктор Федор Кайгородов.">
-                </picure>
-                <div>
-                  <h4>Федор Кайгородов</h4>
-                  <a href="#">
-                    <svg aria-hidden="true" focusable="false" width="14" height="8" fill="currentColor">
-                      <use href="img/sprite.svg#vk"></use>
-                    </svg>
-                    <span class="visually-hidden">Ссылка на контакт инструктора.</span>
-                  </a>
-                </div>
-                <p>Опыт походов: Ходит в походы с 2001 года. В России побывал в горных районах Хибины, Архыз, много путешествует по Европе.</p>
-              </li>
-            </ul>
-            <h3>Процесс обучения</h3>
-            <ul class="coaching__program-list">
-              <li class="coaching__program-item">
-                <img src="img/svg/map.svg" width="25" height="25" alt="">
-                <p>Изучение спортивного туристского движения</p>
-              </li>
-              <li class="coaching__program-item">
-                <img src="img/svg/boots.svg" width="25" height="25" alt="">
-                <p>Подготовка и техническое снаряжение в походах</p>
-              </li>
-              <li class="coaching__program-item">
-                <img src="img/svg/pine-tree.svg" width="25" height="25" alt="">
-                <p>Лекции по окружающей среде, экологии и гигиене</p>
-              </li>
-              <li class="coaching__program-item">
-                <img src="img/svg/mountain.svg" width="25" height="25" alt="">
-                <p>Разъяснение сложности горных препятствий</p>
-              </li>
-            </ul>
-          </div>
-        </section>
+              </div>
+              <h3 class="coaching__program-title">Процесс обучения</h3>
+              <ul class="coaching__program-list">
+                <li class="coaching__program-item">
+                  <picture>
+                    <source type="img/svg+xml" media="(max-width: 767px)" srcset="img/svg/map-mobile.svg">
+                    <img src="img/svg/map.svg" width="25" height="25" alt="">
+                  </picture>
+                  <span class="coaching__program-text">Изучение спортивного туристского движения</span>
+                </li>
+                <li class="coaching__program-item">
+                  <picture>
+                    <source type="img/svg+xml" media="(max-width: 767px)" srcset="img/svg/boots-mobile.svg">
+                    <img src="img/svg/boots.svg" width="25" height="25" alt="">
+                  </picture>
+                  <span class="coaching__program-text">Подготовка и техническое снаряжение в походах</span>
+                </li>
+                <li class="coaching__program-item coaching__program-item--alt-order">
+                  <picture>
+                    <source type="img/svg+xml" media="(max-width: 767px)" srcset="img/svg/pine-tree-mobile.svg">
+                    <img src="img/svg/pine-tree.svg" width="25" height="25" alt="">
+                  </picture>
+                  <span class="coaching__program-text">Лекции по окружающей среде, экологии и гигиене</span>
+                </li>
+                <li class="coaching__program-item">
+                  <picture>
+                    <source type="img/svg+xml" media="(max-width: 767px)" srcset="img/svg/mountain-mobile.svg">
+                    <img src="img/svg/mountain.svg" width="25" height="25" alt="">
+                  </picture>
+                  <span class="coaching__program-text">Разъяснение сложности горных препятствий</span>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
         <section class="about">
           <div class="about__container container">
             <h2>О нас</h2>

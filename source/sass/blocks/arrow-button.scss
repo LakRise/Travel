@@ -1,0 +1,44 @@
+@use "../variables.scss";
+
+.arrow-button {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 37px;
+  height: 35px;
+  background: variables.$color-primary-1;
+  color: variables.$color-default-white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  @include hover-focus {
+    background: $color-default-white;
+    color: $color-secondary-1;
+    box-shadow: inset 1px 1px $color-secondary-1, inset -1px -1px $color-secondary-1;
+  }
+
+  &:active {
+    background: $color-secondary-1;
+  }
+
+  &:active:hover:focus {
+    background: $color-secondary-1;
+    color: $color-default-white;
+    box-shadow: none;
+  }
+
+  &:disabled {
+    background: #999999;
+    pointer-events: none;
+  }
+
+  &:disabled:hover {
+    background: #999999;
+    pointer-events: none;
+    box-shadow: none;
+    color: variables.$color-default-white;
+  }
+}

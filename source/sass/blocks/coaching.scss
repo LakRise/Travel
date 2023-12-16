@@ -1,0 +1,307 @@
+@use "../variables.scss";
+@use "../mixins.scss" as *;
+
+.coaching {
+  padding: 43px 0 2px;
+  overflow: hidden;
+
+  @media (max-width: variables.$vp-1199) {
+    transform: translateY(-2px);
+    padding: 62px 0 47px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    transform: translate(0);
+    padding: 27px 0 21px;
+  }
+}
+
+.coaching h2 {
+  @include section-title;
+
+  margin: 0 0 32px;
+  max-width: 80%;
+
+  &::before {
+    bottom: -2px;
+  }
+
+  @media (max-width: variables.$vp-1199) {
+    margin-bottom: 22px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    margin-bottom: 16px;
+  }
+}
+
+.coaching p {
+  margin: 0 0 60px;
+  max-width: 69%;
+
+  @media (max-width: variables.$vp-1199) {
+    margin-bottom: 28px;
+    max-width: 560px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    margin-bottom: 27px;
+  }
+}
+
+.coaching__swiper {
+  margin: 0 0 57px;
+
+  @media (max-width: variables.$vp-1199) {
+    margin-bottom: 27px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    margin-bottom: 26px;
+  }
+}
+
+.coaching__swiper-header {
+  margin: 0 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  @media (max-width: variables.$vp-1199) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    margin-bottom: 25px;
+  }
+}
+
+.coaching__button-wrapper {
+  padding: 18px 0 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 4px;
+
+  @media (max-width: variables.$vp-1199) {
+    padding-top: 19px;
+  }
+}
+
+.coaching__swiper-title {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 21px;
+  max-width: 80%;
+
+  @media (max-width: variables.$vp-767) {
+    padding: 1px 0 0;
+  }
+}
+
+.coaching__program-title {
+  @include article-head;
+
+  margin: 0 0 23px;
+
+  @media (max-width: variables.$vp-1199) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    margin-bottom: 23px;
+  }
+}
+
+.coaching__program-list {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  justify-content: start;
+  align-items: start;
+  list-style-type: none;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    right: calc(-50vw + 50%);
+    bottom: 13px;
+    width: 100vw;
+    height: 1px;
+    background: rgba(2, 102, 193, 0.2);
+    content: "";
+  }
+
+  @media (max-width: variables.$vp-1199) {
+    margin: 0 auto 0 10px;
+    grid-template-columns: 252px 253px;
+    justify-content: space-between;
+    row-gap: 91px;
+    max-width: 596px;
+    overflow: hidden;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (max-width: variables.$vp-767) {
+    margin: 0 auto 0 0;
+    grid-template-columns: 276px;
+    row-gap: 25px;
+    max-width: 100%;
+
+    &::before {
+      left: 7px;
+      right: auto;
+      top: 12px;
+      bottom: 12px;
+      display: block;
+      width: 1px;
+      height: calc(100% - 24px);
+    }
+  }
+}
+
+.coaching__program-item {
+  position: relative;
+  padding: 5px 10px 22px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 253px;
+  height: 100%;
+
+  &::after {
+    position: absolute;
+    bottom: 6px;
+    left: 10px;
+    width: 14px;
+    height: 14px;
+    background: variables.$color-primary-1;
+    border: none;
+    border-radius: 50%;
+    content: "";
+  }
+
+  @media (max-width: variables.$vp-1199) {
+    padding: 0;
+
+    &::after {
+      left: 0;
+      bottom: -24px;
+    }
+
+    &--alt-order {
+      order: 4;
+    }
+
+    &:nth-child(5n - 3) {
+      &::before {
+        position: absolute;
+        left: -100vw;
+        right: 100%;
+        bottom: -17px;
+        width: 100vw;
+        height: 1px;
+        background: rgba(2, 102, 193, 0.2);
+        content: "";
+      }
+
+      &::after {
+        left: 1px;
+      }
+    }
+
+    &:nth-child(5n - 2) {
+      &::after {
+        left: 1px;
+        bottom: auto;
+        top: -27px;
+      }
+
+      &::before {
+        position: absolute;
+        left: 7px;
+        top: -76px;
+        width: 1px;
+        height: 56px;
+        background: rgba(2, 102, 193, 0.2);
+        content: "";
+      }
+    }
+
+    &:nth-child(5n - 1) {
+      &::after {
+        bottom: auto;
+        top: -27px;
+      }
+
+      &::before {
+        position: absolute;
+        left: 0;
+        top: -21px;
+        width: 345px;
+        height: 1px;
+        background: rgba(2, 102, 193, 0.2);
+        content: "";
+      }
+    }
+  }
+
+  @media (max-width: variables.$vp-767) {
+    width: 100%;
+    max-width: 100%;
+    gap: 13px;
+
+    &::after {
+      transform: translateY(1px);
+      align-self: center;
+      position: static;
+      margin-right: 1px;
+      order: -1;
+    }
+
+    &::before {
+      display: none;
+    }
+
+    &--alt-order {
+      order: 0;
+    }
+  }
+}
+
+.coaching__program-item img {
+  transform: translateY(2px);
+
+  @media (max-width: variables.$vp-767) {
+    transform: translateY(7px);
+    width: 23px;
+    height: 20px;
+  }
+}
+
+.coaching__program-text {
+  margin: 0;
+  max-width: 83%;
+
+  @media (max-width: variables.$vp-1199) {
+    font-size: 14px;
+    line-height: 22px;
+    max-width: 84%;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    font-size: 12px;
+    line-height: 18px;
+    max-width: 72%;
+  }
+}

@@ -1,7 +1,9 @@
 const hero = document.querySelector('[data-swiper="hero"]');
 
+let swiperHero = '';
+
 const setSwiperHero = () => {
-  const swiperHero = new window.Swiper(hero, {
+  swiperHero = new window.Swiper(hero, {
     direction: 'horizontal',
     loop: false,
     slidesPerView: '1',
@@ -15,4 +17,4 @@ const setSwiperHero = () => {
   });
 };
 
-export {setSwiperHero};
+export {setSwiperHero, swiperHero};

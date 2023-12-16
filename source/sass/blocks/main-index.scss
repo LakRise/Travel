@@ -1,3 +1,5 @@
+@use "../variables.scss";
+
 .main-index.modal-opened {
   &::before {
     position: absolute;
@@ -8,5 +10,30 @@
     height: 100vh;
     background: rgba(45, 56, 63, 0.6);
     content: "";
+  }
+}
+
+.main-index__background-1 {
+  position: relative;
+  overflow: hidden;
+}
+
+.main-index__picture-wrapper img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -2;
+
+  @media (max-width: variables.$vp-1199) {
+    width: 602px;
+    height: 1364px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    top: 110px;
+    right: -87px;
+    width: 346px;
+    height: 595px;
+    object-fit: contain;
   }
 }
