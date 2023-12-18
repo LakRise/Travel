@@ -667,79 +667,166 @@
             </div>
           </section>
         </div>
-        <section class="about">
-          <div class="about__container container">
-            <h2>О нас</h2>
-            <h3>История компании</h3>
-            <p>В далёком 2000 году мы начали заниматься туризмом — походы, поездки, восхождения, нам это настолько понравилось,
-            что мы этим стали жить. Спустя 5 лет, в 2005 году мы основали компанию, чтобы показывать людям удивительные места нашей
-            страны.</p>
-            <h3>Наша цель</h3>
-            <p>Подарить вам незабываемые впечатления от похода в горы. Мы берём на себя все организационные вопросы. При организации
-            мы обязательно учтём все ваши пожелания. Вам останется только наслаждаться незабываемым приключением в приятной
-            компании.</p>
+        <section class="about" data-test="about">
+          <div class="about__background-wrapper">
             <picture>
-              <source type="image/webp" media="(max-width=767px)" srcset="img/about-mobile-1x.webp 1x,
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/about-mobile-1x.webp 1x,
               img/about-mobile-2x.webp 2x">
-              <source type="image/webp" media="(max-width=1199px)" srcset="img/about-tablet-1x.webp 1x,
+              <source type="image/webp" media="(max-width: 1199px)" srcset="img/about-tablet-1x.webp 1x,
               img/about-tablet-2x.webp 2x">
               <source type="image/webp" srcset="img/about-desktop-1x.webp 1x,
               img/about-desktop-2x.webp 2x">
-              <source type="image/jpg" media="(max-width=767px)" srcset="img/about-mobile-1x.jpg 1x,
+              <source type="image/jpg" media="(max-width: 767px)" srcset="img/about-mobile-1x.jpg 1x,
               img/about-mobile-2x.jpg 2x">
-              <source type="image/jpg" media="(max-width=1199px)" srcset="img/about-tablet-1x.jpg 1x,
+              <source type="image/jpg" media="(max-width: 1199px)" srcset="img/about-tablet-1x.jpg 1x,
               img/about-tablet-2x.jpg 2x">
               <img src="img/about-desktop-1x.jpg" srcset="img/about-desktop-2x.jpg 2x" width="808" height="474"
               alt="Фотография с одного из наших походов.">
             </picture>
           </div>
-        </section>
-        <section class="feedback">
           <div class="container">
-            <h2>Отзывы</h2>
-            <ul class="feedback__list">
-              <li class="feedback__item">
-                <picture>
-                  <source type="image/webp" media="(max-width=767px)" srcset="img/feedback-1-mobile-1x.webp 1x,
-                  img/feedback-1-mobile-2x.webp 2x">
-                  <source type="image/webp" media="(max-width=1199px)" srcset="img/feedback-1-tablet-1x.webp 1x,
-                  img/feedback-1-tablet-2x.webp 2x">
-                  <source type="image/webp" srcset="img/feedback-1-desktop-1x.webp 1x,
-                  img/feedback-1-desktop-2x.webp 2x">
-                  <source type="image/jpg" media="(max-width=767px)" srcset="img/feedback-1-mobile-1x.jpg 1x,
-                  img/feedback-1-mobile-2x.jpg 2x">
-                  <source type="image/jpg" media="(max-width=1199px)" srcset="img/feedback-1-tablet-1x.jpg 1x,
-                  img/feedback-1-tablet.2x.jpg 2x">
-                  <img src="img/feedback-1-desktop-1x.jpg" srcset="img/feedback-1-desktop-2x.jpg 2x" width="258" height="253"
-                  alt="Аватар автора отзыва.">
-                </picture>
-                <div class="feedback__item-content-wrapper">
-                  <p>Осенью ходили в поход на Алтай с друзьями. Впечатления потрясающие! Инструкторы — настоящие эксперты — всему научили,
-                  все показали. Делились увлекательными историями о местах, людях, культуре места.</p>
-                  <p>С уверенностью могу сказать, что жизнь разделилась на до этого и после. Ещё никогда не отдыхал так душой и телом. Всем
-                  очень рекомендую!</p>
-                  <h3>Фролов Александр</h3>
-                  <span>38 лет, Москва</span>
+            <div class="about__wrapper">
+              <h2 data-title="О нас">О нас</h2>
+              <h3>История компании</h3>
+              <p>В далёком 2000 году мы начали заниматься туризмом — походы, поездки, восхождения, нам это настолько понравилось,
+              что мы этим стали жить. <br>Спустя 5 лет, в 2005 году мы основали компанию, чтобы показывать людям удивительные места нашей
+              страны.</p>
+              <h3>Наша цель</h3>
+              <p>Подарить вам незабываемые впечатления от похода в горы. Мы берём на себя все организационные вопросы. При организации
+              мы обязательно учтём все ваши пожелания. Вам останется только наслаждаться незабываемым приключением в приятной
+              компании.</p>
+            </div>
+          </div>
+        </section>
+        <section class="feedback" data-test="reviews">
+          <div class="container">
+            <div class="feedback__header-wrapper">
+              <h2 data-title="Отзывы">Отзывы</h2>
+              <div class="feedback__swiper-button-wrapper">
+                <button class="feedback__swiper-button arrow-button" data-feedback="previous">
+                  <span class="visually-hidden">Предыдущий слайд.</span>
+                  <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
+                    <use href="img/sprite.svg#left"></use>
+                  </svg>
+                </button>
+                <button class="feedback__swiper-button arrow-button" data-feedback="next">
+                  <span class="visually-hidden">Следующий слайд.</span>
+                  <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
+                    <use href="img/sprite.svg#right"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="feedback__swiper swiper" data-swiper="feedback">
+              <div class="swiper-wrapper">
+                <div class="feedback__item swiper-slide">
+                  <div class="feedback__item-picture-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/feedback-1-mobile-1x.webp 1x,
+                      img/feedback-1-mobile-2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1199px)" srcset="img/feedback-1-tablet-1x.webp 1x,
+                      img/feedback-1-tablet-2x.webp 2x">
+                      <source type="image/webp" srcset="img/feedback-1-desktop-1x.webp 1x,
+                      img/feedback-1-desktop-2x.webp 2x">
+                      <source type="image/jpg" media="(max-width: 767px)" srcset="img/feedback-1-mobile-1x.jpg 1x,
+                      img/feedback-1-mobile-2x.jpg 2x">
+                      <source type="image/jpg" media="(max-width: 1199px)" srcset="img/feedback-1-tablet-1x.jpg 1x,
+                      img/feedback-1-tablet.2x.jpg 2x">
+                      <img src="img/feedback-1-desktop-1x.jpg" srcset="img/feedback-1-desktop-2x.jpg 2x" width="258" height="253"
+                      alt="Аватар автора отзыва.">
+                    </picture>
+                  </div>
+                  <div class="feedback__item-content-wrapper">
+                    <p>Осенью ходили в поход на Алтай с друзьями. Впечатления потрясающие! Инструкторы — настоящие эксперты — всему научили,
+                    все показали. Делились увлекательными историями о местах, людях, культуре места.</p>
+                    <p>С уверенностью могу сказать, что жизнь разделилась на до этого и после. Ещё никогда не отдыхал так душой и телом. Всем
+                    очень рекомендую!</p>
+                    <h3>Фролов Александр</h3>
+                    <span>38 лет, Москва</span>
+                  </div>
                 </div>
-              </li>
-              <li class="feedback__item">
-                <picture>
-                  <source type="image/webp" srcset="img/feedback-2-desktop-1x.webp 1x,
-                  img/feedback-2-desktop-2x.webp 2x">
-                  <img src="img/feedback-2-desktop-1x.jpg" srcset="img/feedback-2-desktop-2x.jpg" width="258" height="253"
-                  alt="Аватар автора отзыва.">
-                </picture>
-                <div class="feedback__item-content-wrapper">
-                  <p>Хороший полноценный поход с разнообразными локациями. В начале дорога идет по лыжне, далее прошли мимо полигона, по
-                  болотам, у озер и лесных ручьев, остатков дач конца 19 века.
-                  Было очень интересно!</p>
-                  <p>Инструктор Федор дружелюбный, внимательный к технике безопасности и своим туристам.
-                  Всем советую этот тур.</p>
-                  <h3>Иван Соловьев</h3>
-                  <span>25 лет, Владивосток</span>
+                <div class="feedback__item swiper-slide">
+                  <div class="feedback__item-picture-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/feedback-2-mobile-1x.webp 1x,
+                      img/feedback-2-mobile-2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1199px)" srcset="img/feedback-2-tablet-1x.webp 1x,
+                      img/feedback-2-tablet-2x.webp 2x">
+                      <source type="image/webp" srcset="img/feedback-2-desktop-1x.webp 1x,
+                      img/feedback-2-desktop-2x.webp 2x">
+                      <source type="image/jpg" media="(max-width: 767px)" srcset="img/feedback-2-mobile-1x.jpg 1x,
+                      img/feedback-2-mobile-2x.jpg 2x">
+                      <source type="image/jpg" media="(max-width: 1199px)" srcset="img/feedback-2-tablet-1x.jpg 1x,
+                      img/feedback-2-tablet-2x.jpg 2x">
+                      <img src="img/feedback-2-desktop-1x.jpg" srcset="img/feedback-2-desktop-2x.jpg" width="258" height="253"
+                      alt="Аватар автора отзыва.">
+                    </picture>
+                  </div>
+                  <div class="feedback__item-content-wrapper">
+                    <p>Хороший полноценный поход <br>с разнообразными локациями. В начале дорога идет по лыжне, далее прошли мимо полигона, по
+                    болотам, у озер и лесных ручьев, остатков дач конца 19 века.
+                    Было очень интересно!</p>
+                    <p>Инструктор Федор дружелюбный, внимательный к технике безопасности и своим туристам.
+                    Всем советую этот тур.</p>
+                    <h3>Иван Соловьев</h3>
+                    <span>25 лет, Владивосток</span>
+                  </div>
                 </div>
-              </li>
-            </ul>
+                <div class="feedback__item swiper-slide">
+                  <div class="feedback__item-picture-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/feedback-3-mobile-1x.webp 1x,
+                      img/feedback-3-mobile-2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1199px)" srcset="img/feedback-3-tablet-1x.webp 1x,
+                      img/feedback-3-tablet-2x.webp 2x">
+                      <source type="image/webp" srcset="img/feedback-3-desktop-1x.webp 1x,
+                      img/feedback-3-desktop-2x.webp 2x">
+                      <source type="image/jpg" media="(max-width: 767px)" srcset="img/feedback-3-mobile-1x.jpg 1x,
+                      img/feedback-3-mobile-2x.jpg 2x">
+                      <source type="image/jpg" media="(max-width: 1199px)" srcset="img/feedback-3-tablet-1x.jpg 1x,
+                      img/feedback-3-tablet.2x.jpg 2x">
+                      <img src="img/feedback-3-desktop-1x.jpg" srcset="img/feedback-3-desktop-2x.jpg 2x" width="258" height="253"
+                      alt="Аватар автора отзыва.">
+                    </picture>
+                  </div>
+                  <div class="feedback__item-content-wrapper">
+                    <p>Ранее не ходила на такие длинные дистанции. В первый день прошли около 30 км, физически я устала на 18 км,
+                      поэтому
+                      не была уверена, пройду ли до конца. Но я справилась. Второй день прошёл легче, чем ожидала, видимо организм
+                      уже привык.</p>
+                    <p>Спасибо ребятам, инструкторам за помощь и поддержку! Я была рада быть в такой компании.</p>
+                    <h3>Евгения Баженова</h3>
+                    <span>23 года, Кострома</span>
+                  </div>
+                </div>
+                <div class="feedback__item swiper-slide">
+                  <div class="feedback__item-picture-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/feedback-4-mobile-1x.webp 1x,
+                      img/feedback-4-mobile-2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1199px)" srcset="img/feedback-4-tablet-1x.webp 1x,
+                      img/feedback-4-tablet-2x.webp 2x">
+                      <source type="image/webp" srcset="img/feedback-4-desktop-1x.webp 1x,
+                      img/feedback-4-desktop-2x.webp 2x">
+                      <source type="image/jpg" media="(max-width: 767px)" srcset="img/feedback-4-mobile-1x.jpg 1x,
+                      img/feedback-4-mobile-2x.jpg 2x">
+                      <source type="image/jpg" media="(max-width: 1199px)" srcset="img/feedback-4-tablet-1x.jpg 1x,
+                      img/feedback-4-tablet.2x.jpg 2x">
+                      <img src="img/feedback-4-desktop-1x.jpg" srcset="img/feedback-4-desktop-2x.jpg 2x" width="258" height="253"
+                      alt="Аватар автора отзыва.">
+                    </picture>
+                  </div>
+                  <div class="feedback__item-content-wrapper">
+                    <p>Это был опыт, изменивший мою жизнь! Думала, не справлюсь, но все получилось! Дух захватывает, когда наконец‑то,
+                    преодолев все трудности и препятствия, взбираешься на вершину.</p>
+                    <p>У нас собралась потрясающая команда. Все друг друга поддерживали, по вечерам мы сидели вместе у костра и пели песни.
+                    Обязательно повторю такое приключение!</p>
+                    <h3>Елена Пирогова</h3>
+                    <span>37 лет, Тюмень</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
         <section class="advantages">
