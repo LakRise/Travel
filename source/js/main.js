@@ -6,6 +6,7 @@ import {setAudio} from './modules/audio-button';
 import {setVideo} from './modules/video-button';
 import {setSwiperCoaching} from './modules/coaching-swiper';
 import {setSwiperFeedback} from './modules/feedback-swiper';
+import {setSwiperAdvantages} from './modules/advantages-swiper';
 
 // ---------------------------------
 
@@ -22,6 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
   setSwiperTours();
   setSwiperCoaching();
   setSwiperFeedback();
+  setSwiperAdvantages();
 
   // Modules
   // ---------------------------------

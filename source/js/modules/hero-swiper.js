@@ -1,11 +1,9 @@
 const hero = document.querySelector('[data-swiper="hero"]');
 
-let swiperHero = '';
-
 const setSwiperHero = () => {
-  swiperHero = new window.Swiper(hero, {
+  const swiperHero = new window.Swiper(hero, {
     direction: 'horizontal',
-    loop: false,
+    loop: true,
     slidesPerView: '1',
     autoHeight: true,
     pagination: {
@@ -15,6 +13,7 @@ const setSwiperHero = () => {
       bulletActiveClass: 'hero__pagination-bullet--active',
     },
   });
+  return swiperHero;
 };
 
-export {setSwiperHero, swiperHero};
+export {setSwiperHero};

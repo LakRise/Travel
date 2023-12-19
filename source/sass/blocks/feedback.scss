@@ -35,6 +35,10 @@
   margin: 0;
   max-width: 68%;
 
+  &::before {
+    transform: translateY(1px);
+  }
+
   @media (max-width: variables.$vp-1199) {
     transform: translate(0);
     padding: 0 0 9px 1px;
@@ -91,6 +95,7 @@
   align-items: start;
   gap: 30px;
   width: 700px;
+  background: variables.$color-default-white;
   box-shadow: 0 0 20px 0 rgba(28, 51, 116, 0.1);
 
   @media (max-width: variables.$vp-1199) {
@@ -111,6 +116,7 @@
 }
 
 .feedback__item p {
+  transform: translateY(-1px);
   margin: 0;
   font-size: 14px;
   line-height: 22px;
@@ -120,6 +126,7 @@
   }
 
   @media (max-width: variables.$vp-1199) {
+    transform: translate(0);
     margin-bottom: 6px;
     padding: 4px 0 0;
     font-size: 12px;

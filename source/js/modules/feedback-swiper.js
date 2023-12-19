@@ -1,9 +1,7 @@
 const feedback = document.querySelector('[data-swiper="feedback"]');
 
-let feedbackSwiper = '';
-
 const setSwiperFeedback = () => {
-  feedbackSwiper = new window.Swiper(feedback, {
+  const feedbackSwiper = new window.Swiper(feedback, {
     direction: 'horizontal',
     loop: true,
     autoHeight: false,
@@ -17,7 +15,7 @@ const setSwiperFeedback = () => {
         spaceBetween: 30,
       },
       320: {
-        spaceBetween: 20,
+        spaceBetween: 40,
       },
     },
     navigation: {
@@ -25,6 +23,7 @@ const setSwiperFeedback = () => {
       prevEl: '[data-feedback="previous"]',
     },
   });
+  return feedbackSwiper;
 };
 
-export {setSwiperFeedback, feedbackSwiper};
+export {setSwiperFeedback};

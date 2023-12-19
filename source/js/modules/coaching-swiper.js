@@ -1,9 +1,7 @@
 const coaching = document.querySelector('[data-swiper="coaching"]');
 
-let swiperCoaching = '';
-
 const setSwiperCoaching = () => {
-  swiperCoaching = new window.Swiper(coaching, {
+  const swiperCoaching = new window.Swiper(coaching, {
     direction: 'horizontal',
     loop: false,
     autoHeight: false,
@@ -28,6 +26,7 @@ const setSwiperCoaching = () => {
       prevEl: '[data-coaching="previous"]',
     },
   });
+  return swiperCoaching;
 };
 
-export {setSwiperCoaching, swiperCoaching};
+export {setSwiperCoaching};

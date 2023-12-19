@@ -1,9 +1,7 @@
 const tours = document.querySelector('[data-swiper="tours"]');
 
-let toursSwiper = '';
-
 const setSwiperTours = () => {
-  toursSwiper = new window.Swiper(tours, {
+  const toursSwiper = new window.Swiper(tours, {
     direction: 'horizontal',
     loop: false,
     autoHeight: false,
@@ -27,6 +25,7 @@ const setSwiperTours = () => {
       prevEl: '[data-tours="previous"]',
     },
   });
+  return toursSwiper;
 };
 
-export {setSwiperTours, toursSwiper};
+export {setSwiperTours};

@@ -97,6 +97,26 @@
   text-decoration: none;
   color: variables.$color-default-black;
   text-align: center;
+
+  @include hover-focus {
+    color: variables.$color-secondary-1;
+  }
+
+  &:active {
+    color: variables.$color-primary-1;
+  }
+
+  &:active:hover:focus {
+    color: variables.$color-primary-1;
+  }
+
+  &--disabled {
+    color: variables.$color-primary-1;
+  }
+}
+
+.tours__link--disabled svg {
+  opacity: 0.1;
 }
 
 .tours__link-text {

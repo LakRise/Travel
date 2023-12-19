@@ -829,42 +829,92 @@
             </div>
           </div>
         </section>
-        <section class="advantages">
+        <section class="advantages" data-test="adv">
+          <div class="advantages__background-1">
+            <picture>
+              <source type="image/webp" media="(max-width: 1199px)" srcset="img/clouds-3-tablet-1x.webp 1x,
+              img/clouds-3-tablet-2x.webp 2x">
+              <source type="image/webp" srcset="img/clouds-3-desktop-1x.webp 1x,
+              img/clouds-3-desktop-2x.webp 2x">
+              <source type="image/png" media="(max-width: 1199px)" srcset="img/clouds-3-tablet-1x.png 1x,
+              img/clouds-3-tablet-2x.png 2x">
+              <img src="img/clouds-3-desktop-1x.png" srcset="img/clouds-3-desktop-2x.png 2x" width="875" height="402"
+              alt="">
+            </picture>
+          </div>
+          <div class="advantages__background-2">
+            <picture>
+              <source type="image/webp" media="(max-width: 1199px)" srcset="img/clouds-4-tablet-1x.webp 1x,
+              img/clouds-4-tablet-2x.webp 2x">
+              <source type="image/webp" srcset="img/clouds-4-desktop-1x.webp 1x,
+              img/clouds-4-desktop-2x.webp 2x">
+              <source type="image/png" media="(max-width: 1199px)" srcset="img/clouds-4-tablet-1x.png 1x,
+              img/clouds-4-tablet-2x.png 2x">
+              <img src="img/clouds-4-1x.png" srcset="img/clouds-4-2x.png 2x" width="462" height="263"
+              alt="">
+            </picture>
+          </div>
           <div class="container">
-            <h2>Преимущества</h2>
-            <ul class="advantages__list">
-              <li class="advantages__item">
-                <img src="img/svg/shield.svg" width="24" height="24" alt="">
-                <h3>Безопасность</h3>
-                <p>Уделяем внимание безопасности клиентов, внедряя строгие процедуры и протоколы безопасности. Имеем планы действий
-                на случай непредвиденных обстоятельств и даём гарантию полной безопасности во время всего тура.</p>
-              </li>
-              <li class="advantages__item">
-                <img src="img/svg/crown.svg" width="24" height="24" alt="">
-                <h3>Экспертиза и знания</h3>
-                <p>Наша команда опытных гидов имеет обширные знания о местности, погодных условиях и технике безопасности. Это гарантирует,
-                что наши клиенты находятся в надёжных руках и могут в полной мере насладиться опытом без опасений.</p>
-              </li>
-              <li class="advantages__item">
-                <img src="img/svg/adv-boots.svg" width="24" height="24" alt="">
-                <h3>Оборудование и снаряжение</h3>
-                <p>Мы предоставляем клиентам все необходимое оборудование, необходимое для путешествия. Это избавляет клиентов
-                от необходимости покупать, брать с собой снаряжение, что делает путешествие более удобным и экономически выгодным.</p>
-              </li>
-              <li class="advantages__item">
-                <img src="img/svg/path.svg" width="24" height="24" alt="">
-                <h3>Оборудование и снаряжение</h3>
-                <p>Предлагаем широкий выбор туров, отвечающих различным уровням мастерства и интересам. Мы также можем адаптировать
-                маршруты к вашим конкретным потребностям и предпочтениям, чтобы вы получили индивидуальный опыт.
-                </p>
-              </li>
-              <li class="advantages__item">
-                <img src="img/svg/path.svg" width="24" height="24" alt="">
-                <h3>Безопасность</h3>
-                <p>Уделяем внимание безопасности клиентов, внедряя строгие процедуры и протоколы безопасности. Имеем планы действий
-                на случай непредвиденных обстоятельств и даём гарантию полной безопасности во время всего тура.</p>
-              </li>
-            </ul>
+            <h2 data-title="Преимущества">Преимущества</h2>
+            <div class="advantages__swiper swiper" data-swiper="advantages">
+              <div class="advantages__list swiper-wrapper" data-advantages="wrapper">
+                <div class="advantages__item swiper-slide">
+                  <div class="advantages__item-picture-wrapper">
+                    <img src="img/svg/shield.svg" width="24" height="24" alt="">
+                  </div>
+                  <h3>Безопасность</h3>
+                  <p>Уделяем внимание безопасности клиентов, внедряя строгие процедуры и протоколы безопасности. Имеем планы действий
+                  на случай непредвиденных обстоятельств и даём гарантию полной безопасности во время всего тура.</p>
+                </div>
+                <div class="advantages__item swiper-slide">
+                  <div class="advantages__item-picture-wrapper">
+                    <img src="img/svg/crown.svg" width="24" height="24" alt="">
+                  </div>
+                  <h3>Экспертиза и знания</h3>
+                  <p>Наша команда опытных гидов имеет обширные знания о местности, погодных условиях и технике безопасности. <br>Это гарантирует,
+                  что наши клиенты находятся в надёжных руках и могут в полной мере насладиться опытом без опасений.</p>
+                </div>
+                <div class="advantages__item swiper-slide">
+                  <div class="advantages__item-picture-wrapper">
+                    <img src="img/svg/adv-boots.svg" width="24" height="24" alt="">
+                  </div>
+                  <h3>Оборудование и снаряжение</h3>
+                  <p>Мы предоставляем клиентам все необходимое оборудование, необходимое для путешествия. Это избавляет клиентов
+                  от необходимости покупать, брать с собой снаряжение, что делает путешествие более удобным и экономически выгодным.</p>
+                </div>
+                <div class="advantages__item swiper-slide">
+                  <div class="advantages__item-picture-wrapper">
+                    <img src="img/svg/path.svg" width="24" height="24" alt="">
+                  </div>
+                  <h3>Индивидуальные маршруты</h3>
+                  <p>Предлагаем широкий выбор туров, отвечающих различным уровням мастерства и интересам. Мы также можем адаптировать
+                  маршруты к вашим конкретным потребностям и предпочтениям, чтобы вы получили индивидуальный опыт.
+                  </p>
+                </div>
+                <div class="advantages__item swiper-slide">
+                  <div class="advantages__item-picture-wrapper">
+                    <img src="img/svg/leaf.svg" width="24" height="24" alt="">
+                  </div>
+                  <h3>Бережное отношение <br>к природе</h3>
+                  <p>Уделяем первостепенное внимание охране окружающей среды и гарантируем, что туры оказывают минимальное воздействие на
+                  природную среду. Наша компания следует принципу «Не оставлять следов».</p>
+                </div>
+              </div>
+            </div>
+            <div class="advantages__swiper-button-wrapper">
+              <button class="advantages__swiper-button arrow-button" data-advantages="previous">
+                <span class="visually-hidden">Предыдущий слайд.</span>
+                <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
+                  <use href="img/sprite.svg#left"></use>
+                </svg>
+              </button>
+              <button class="advantages__swiper-button arrow-button" data-advantages="next">
+                <span class="visually-hidden">Следующий слайд.</span>
+                <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
+                  <use href="img/sprite.svg#right"></use>
+                </svg>
+              </button>
+            </div>
           </div>
         </section>
         <section class="gallery">
