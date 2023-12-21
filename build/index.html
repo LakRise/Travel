@@ -917,129 +917,177 @@
             </div>
           </div>
         </section>
-        <section class="gallery">
-          <div class="container">
-            <ul class="gallery__list">
-              <li class="gallery__item">
-                <picture>
-                  <source type="image/webp" media="(max-width=767px)" srcset="img/gallery-1-mobile-1x.webp 1x,
-                  img/gallery-1-mobile-2x.webp 2x">
-                  <source type="image/webp" media="(max-width=1199px)" srcset="img/gallery-1-tablet-1x.webp 1x,
-                  img/gallery-1-tablet-2x.webp 2x">
-                  <source type="image/webp" srcset="img/gallery-1-desktop-1x.webp 1x,
-                  img/gallery-1-desktop-2x.webp 2x">
-                  <source type="image/jpg" media="(max-width=767px)" srcset="img/gallery-1-mobile-1x.jpg 1x,
-                  img/gallery-1-mobile-2x.jpg 2x">
-                  <source type="image/jpg" media="(max-width=1199px)" srcset="img/gallery-1-tablet-1x.jpg 1x,
-                  img/gallery-1-tablet-2x.jpg 2x">
-                  <img src="img/gallery-1-desktop-1x.jpg" srcset="img/gallery-1-desktop-2x.jpg 2x" width="275" height="449"
-                  alt="Фотография с похода.">
-                </picture>
-              </li>
-              <li class="gallery__item">
-                <div class="gallery__item-wrapper">
+        <section class="gallery" data-test="gallery">
+          <div class="gallery__container container">
+            <h2 data-title="Фотогалерея">Фотогалерея</h2>
+            <div class="gallery__swiper-header-wrapper">
+              <p>Добавляйте фото в Instagram с хэштегом #лайфтур, а также отмечайте нас на фото.
+              <br>Лучшие фотографии украсят этот раздел нашего сайта.</p>
+              <div class="gallery__swiper-button-wrapper">
+                <button class="gallery__swiper-button arrow-button" data-gallery="previous">
+                  <span class="visually-hidden">Предыдущий слайд.</span>
+                  <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
+                    <use href="img/sprite.svg#left"></use>
+                  </svg>
+                </button>
+                <button class="gallery__swiper-button arrow-button" data-gallery="next">
+                  <span class="visually-hidden">Следующий слайд.</span>
+                  <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
+                    <use href="img/sprite.svg#right"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="gallery__swiper swiper" data-swiper="gallery">
+              <div class="swiper-wrapper">
+                <div class="gallery__item gallery__item--width-1 swiper-slide">
                   <picture>
-                    <source type="image/webp" media="(max-width=767px)" srcset="img/gallery-2-mobile-1x.webp 1x,
-                    img/gallery-2-mobile-2x.webp 2x">
-                    <source type="image/webp" media="(max-width=1199px)" srcset="img/gallery-2-tablet-1x.webp 1x,
-                    img/gallery-2-tablet-2x.webp 2x">
-                    <source type="image/webp" srcset="img/gallery-2-desktop-1x.webp 1x,
-                    img/gallery-2-desktop-2x.webp 2x">
-                    <source type="image/jpg" media="(max-width=767px)" srcset="img/gallery-2-mobile-1x.jpg 1x,
-                    img/gallery-2-mobile-2x.jpg 2x">
-                    <source type="image/jpg" media="(max-width=1199px)" srcset="img/gallery-2-tablet-1x.jpg 1x,
-                    img/gallery-2-tablet-2x.jpg 2x">
-                    <img src="img/gallery-2-desktop-1x.jpg" srcset="img/gallery-2-desktop-2x.jpg 2x" width="298" height="179"
-                    alt="Фотография с похода.">
-                  </picture>
-                  <picture>
-                    <source type="image/webp" media="(max-width=767px)" srcset="img/gallery-3-mobile-1x.webp 1x,
-                    img/gallery-3-mobile-2x.webp 2x">
-                    <source type="image/webp" media="(max-width=1199px)" srcset="img/gallery-3-tablet-1x.webp 1x,
-                    img/gallery-3-tablet-2x.webp 2x">
-                    <source type="image/webp" srcset="img/gallery-3-desktop-1x.webp 1x,
-                    img/gallery-3-desktop-2x.webp 2x">
-                    <source type="image/jpg" media="(max-width=767px)" srcset="img/gallery-3-mobile-1x.jpg 1x,
-                    img/gallery-3-mobile-2x.jpg 2x">
-                    <source type="image/jpg" media="(max-width=1199px)" srcset="img/gallery-3-tablet-1x.jpg 1x,
-                    img/gallery-3-tablet-2x.jpg 2x">
-                    <img src="img/gallery-3-desktop-1x.jpg" srcset="img/gallery-3-desktop-2x.jpg 2x" width="298" height="265"
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/gallery-1-mobile-1x.webp 1x,
+                    img/gallery-1-mobile-2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1199px)" srcset="img/gallery-1-tablet-1x.webp 1x,
+                    img/gallery-1-tablet-2x.webp 2x">
+                    <source type="image/webp" srcset="img/gallery-1-desktop-1x.webp 1x,
+                    img/gallery-1-desktop-2x.webp 2x">
+                    <source type="image/jpg" media="(max-width: 767px)" srcset="img/gallery-1-mobile-1x.jpg 1x,
+                    img/gallery-1-mobile-2x.jpg 2x">
+                    <source type="image/jpg" media="(max-width: 1199px)" srcset="img/gallery-1-tablet-1x.jpg 1x,
+                    img/gallery-1-tablet-2x.jpg 2x">
+                    <img src="img/gallery-1-desktop-1x.jpg" srcset="img/gallery-1-desktop-2x.jpg 2x" width="275" height="450"
                     alt="Фотография с похода.">
                   </picture>
                 </div>
-              </li>
-              <li class="gallery__item">
-                <picture>
-                  <source type="image/webp" media="(max-width=767px)" srcset="img/gallery-4-mobile-1x.webp 1x,
-                  img/gallery-4-mobile-2x.webp 2x">
-                  <source type="image/webp" media="(max-width=1199px)" srcset="img/gallery-4-tablet-1x.webp 1x,
-                  img/gallery-4-tablet-2x.webp 2x">
-                  <source type="image/webp" srcset="img/gallery-4-desktop-1x.webp 1x,
-                  img/gallery-4-desktop-2x.webp 2x">
-                  <source type="image/jpg" media="(max-width=767px)" srcset="img/gallery-4-mobile-1x.jpg 1x,
-                  img/gallery-4-mobile-2x.jpg 2x">
-                  <source type="image/jpg" media="(max-width=1199px)" srcset="img/gallery-4-tablet-1x.jpg 1x,
-                  img/gallery-4-tablet-2x.jpg 2x">
-                  <img src="img/gallery-4-desktop-1x.jpg" srcset="img/gallery-4-desktop-2x.jpg 2x" width="275" height="449"
-                  alt="Фотография с похода.">
-                </picture>
-              </li>
-              <li class="gallery__item">
-                <div class="gallery__item-wrapper">
+                <div class="gallery__item gallery__item--width-2 swiper-slide">
+                  <div class="gallery__item-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/gallery-2-mobile-1x.webp 1x,
+                      img/gallery-2-mobile-2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1199px)" srcset="img/gallery-2-tablet-1x.webp 1x,
+                      img/gallery-2-tablet-2x.webp 2x">
+                      <source type="image/webp" srcset="img/gallery-2-desktop-1x.webp 1x,
+                      img/gallery-2-desktop-2x.webp 2x">
+                      <source type="image/jpg" media="(max-width: 767px)" srcset="img/gallery-2-mobile-1x.jpg 1x,
+                      img/gallery-2-mobile-2x.jpg 2x">
+                      <source type="image/jpg" media="(max-width: 1199px)" srcset="img/gallery-2-tablet-1x.jpg 1x,
+                      img/gallery-2-tablet-2x.jpg 2x">
+                      <img src="img/gallery-2-desktop-1x.jpg" srcset="img/gallery-2-desktop-2x.jpg 2x" width="298" height="180"
+                      alt="Фотография с похода.">
+                    </picture>
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/gallery-3-mobile-1x.webp 1x,
+                      img/gallery-3-mobile-2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1199px)" srcset="img/gallery-3-tablet-1x.webp 1x,
+                      img/gallery-3-tablet-2x.webp 2x">
+                      <source type="image/webp" srcset="img/gallery-3-desktop-1x.webp 1x,
+                      img/gallery-3-desktop-2x.webp 2x">
+                      <source type="image/jpg" media="(max-width: 767px)" srcset="img/gallery-3-mobile-1x.jpg 1x,
+                      img/gallery-3-mobile-2x.jpg 2x">
+                      <source type="image/jpg" media="(max-width: 1199px)" srcset="img/gallery-3-tablet-1x.jpg 1x,
+                      img/gallery-3-tablet-2x.jpg 2x">
+                      <img src="img/gallery-3-desktop-1x.jpg" srcset="img/gallery-3-desktop-2x.jpg 2x" width="298" height="266"
+                      alt="Фотография с похода.">
+                    </picture>
+                  </div>
+                </div>
+                <div class="gallery__item gallery__item--width-3 swiper-slide">
                   <picture>
-                    <source type="image/webp" srcset="img/gallery-5-desktop-1x.webp 1x,
-                    img/gallery-5-desktop-2x.webp 2x">
-                    <img src="img/gallery-5-desktop-1x.jpg" srcset="img/gallery-5-desktop-2x.jpg 2x" width="298" height="179"
-                    alt="Фотография с похода.">
-                  </picture>
-                  <picture>
-                    <source type="image/webp" srcset="img/gallery-6-desktop-1x.webp 1x,
-                    img/gallery-6-desktop-2x.webp 2x">
-                    <img src="img/gallery-6-desktop-1x.jpg" srcset="img/gallery-6-desktop-2x.jpg 2x" width="298" height="265"
+                    <source type="image/webp" media="(max-width: 1199px)" srcset="img/gallery-4-tablet-1x.webp 1x,
+                    img/gallery-4-tablet-2x.webp 2x">
+                    <source type="image/webp" srcset="img/gallery-4-desktop-1x.webp 1x,
+                    img/gallery-4-desktop-2x.webp 2x">
+                    <source type="image/jpg" media="(max-width: 1199px)" srcset="img/gallery-4-tablet-1x.jpg 1x,
+                    img/gallery-4-tablet-2x.jpg 2x">
+                    <img src="img/gallery-4-desktop-1x.jpg" srcset="img/gallery-4-desktop-2x.jpg 2x" width="272" height="450"
                     alt="Фотография с похода.">
                   </picture>
                 </div>
-              </li>
-              <li class="gallery__item">
-                <picture>
-                  <source type="image/webp" srcset="img/gallery-7-desktop-1x.webp 1x,
-                  img/gallery-7-desktop-2x.webp 2x">
-                  <img src="img/gallery-7-desktop-1x.jpg" srcset="img/gallery-7-desktop-2x.jpg 2x" width="275" height="449"
-                  alt="Фотография с похода.">
-                </picture>
-              </li>
-            </ul>
+                <div class="gallery__item gallery__item--width-2 swiper-slide">
+                  <div class="gallery__item-wrapper">
+                    <picture>
+                      <source type="image/webp" srcset="img/gallery-5-desktop-1x.webp 1x,
+                      img/gallery-5-desktop-2x.webp 2x">
+                      <img src="img/gallery-5-desktop-1x.jpg" srcset="img/gallery-5-desktop-2x.jpg 2x" width="298" height="180"
+                      alt="Фотография с похода.">
+                    </picture>
+                    <picture>
+                      <source type="image/webp" srcset="img/gallery-6-desktop-1x.webp 1x,
+                      img/gallery-6-desktop-2x.webp 2x">
+                      <img src="img/gallery-6-desktop-1x.jpg" srcset="img/gallery-6-desktop-2x.jpg 2x" width="298" height="266"
+                      alt="Фотография с похода.">
+                    </picture>
+                  </div>
+                </div>
+                <div class="gallery__item gallery__item--width-4 swiper-slide">
+                  <picture>
+                    <source type="image/webp" srcset="img/gallery-7-desktop-1x.webp 1x,
+                    img/gallery-7-desktop-2x.webp 2x">
+                    <img src="img/gallery-7-desktop-1x.jpg" srcset="img/gallery-7-desktop-2x.jpg 2x" width="276" height="449"
+                    alt="Фотография с похода.">
+                  </picture>
+                </div>
+                <div class="gallery__item gallery__item--width-2 swiper-slide">
+                  <div class="gallery__item-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/gallery-2-mobile-1x.webp 1x,
+                      img/gallery-2-mobile-2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1199px)" srcset="img/gallery-2-tablet-1x.webp 1x,
+                      img/gallery-2-tablet-2x.webp 2x">
+                      <source type="image/webp" srcset="img/gallery-2-desktop-1x.webp 1x,
+                      img/gallery-2-desktop-2x.webp 2x">
+                      <source type="image/jpg" media="(max-width: 767px)" srcset="img/gallery-2-mobile-1x.jpg 1x,
+                      img/gallery-2-mobile-2x.jpg 2x">
+                      <source type="image/jpg" media="(max-width: 1199px)" srcset="img/gallery-2-tablet-1x.jpg 1x,
+                      img/gallery-2-tablet-2x.jpg 2x">
+                      <img src="img/gallery-2-desktop-1x.jpg" srcset="img/gallery-2-desktop-2x.jpg 2x" width="298" height="180"
+                      alt="Фотография с похода.">
+                    </picture>
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/gallery-3-mobile-1x.webp 1x,
+                      img/gallery-3-mobile-2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1199px)" srcset="img/gallery-3-tablet-1x.webp 1x,
+                      img/gallery-3-tablet-2x.webp 2x">
+                      <source type="image/webp" srcset="img/gallery-3-desktop-1x.webp 1x,
+                      img/gallery-3-desktop-2x.webp 2x">
+                      <source type="image/jpg" media="(max-width: 767px)" srcset="img/gallery-3-mobile-1x.jpg 1x,
+                      img/gallery-3-mobile-2x.jpg 2x">
+                      <source type="image/jpg" media="(max-width: 1199px)" srcset="img/gallery-3-tablet-1x.jpg 1x,
+                      img/gallery-3-tablet-2x.jpg 2x">
+                      <img src="img/gallery-3-desktop-1x.jpg" srcset="img/gallery-3-desktop-2x.jpg 2x" width="298" height="266"
+                      alt="Фотография с похода.">
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
-        <section class="form">
-          <div class="container">
-            <div class="form__content-wrapper">
-              <h2>Остались вопросы?</h2>
-              <p>Заполните форму и наш оператор свяжется с вами для консультации.</p>
-              <form>
-                <label>
-                  <span class="visually-hidden">Введите ваш телефон.</span>
-                  <input type="text" name="phone" placeholder="Телефон">
-                </label>
-                <label>
-                  <span class="visually-hidden">Введите ваш email.</span>
-                  <input type="text" name="email" placeholder="Email">
-                </label>
-                <button type="submit">
-                  <span>Отправить</span>
-                </button>
-              </form>
-              <picture>
-                <source type="image/webp" media="(max-width=1199px)" srcset="img/form-tablet-1x.webp 1x,
-                img/form-tablet-2x.webp 2x">
-                <source type="image/webp" srcset="img/form-desktop-1x.webp 1x,
-                img/form-desktop-2x.webp 2x">
-                <source type="image/jpg" media="(max-width=1199px)" srcset="img/form-tablet-1x.jpg 1x,
-                img/form-tablet-2x.jpg 2x">
-                <img src="img/form-desktop-1x.jpg" srcset="img/form-desktop-2x.jpg 2x" width="1440" height="760"
-                alt="">
-              </picture>
-            </div>
+        <section class="form" data-test="form">
+          <div class="form__background">
+            <picture>
+              <source type="image/webp" media="(max-width: 1199px)" srcset="img/form-tablet-1x.webp 1x,
+              img/form-tablet-2x.webp 2x">
+              <source type="image/webp" srcset="img/form-desktop-1x.webp 1x,
+              img/form-desktop-2x.webp 2x">
+              <source type="image/jpg" media="(max-width: 1199px)" srcset="img/form-tablet-1x.jpg 1x,
+              img/form-tablet-2x.jpg 2x">
+              <img src="img/form-desktop-1x.jpg" srcset="img/form-desktop-2x.jpg 2x" width="1440" height="760" alt="">
+            </picture>
+          </div>
+          <div class="form__container container">
+            <h2>Остались вопросы?</h2>
+            <p>Заполните форму и наш оператор свяжется с вами для консультации.</p>
+            <form action="https://echo.htmlacademy.ru" method="post">
+              <label>
+                <span class="visually-hidden">Введите ваш телефон.</span>
+                <input type="text" name="phone" placeholder="Телефон">
+              </label>
+              <label>
+                <span class="visually-hidden">Введите ваш email.</span>
+                <input type="text" name="email" placeholder="Email">
+              </label>
+              <button class="form__button btn" type="submit">
+                <span>Отправить</span>
+              </button>
+            </form>
           </div>
         </section>
         <section class="contacts">

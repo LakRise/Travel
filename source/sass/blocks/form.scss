@@ -1,0 +1,229 @@
+@use "../variables.scss";
+@use "../mixins.scss" as *;
+
+.form {
+  position: relative;
+  padding: 40px 0;
+  display: flex;
+  align-items: stretch;
+  min-height: 760px;
+  background: variables.$color-default-black;
+  color: variables.$color-default-white;
+
+  @media (max-width: variables.$vp-1199) {
+    min-height: 680px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    padding: 20px 0;
+    min-height: 620px;
+  }
+}
+
+.form__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.form__background img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.form__container {
+  position: relative;
+  z-index: 1;
+  margin: auto;
+  padding: 3px 240px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: variables.$vp-1199) {
+    padding: 2px 45px 0;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    padding: 0 15px;
+  }
+}
+
+.form h2 {
+  margin: 0 auto 18px;
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 35px;
+  text-align: center;
+
+  @media (max-width: variables.$vp-1199) {
+    transform: translateX(-2px);
+    margin-bottom: 30px;
+    max-width: 301px;
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    transform: translate(0);
+    margin-bottom: 19px;
+    max-width: 290px;
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+
+.form p {
+  margin: 0 auto 10px;
+  text-align: center;
+
+  &:last-of-type {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: variables.$vp-1199) {
+    width: 301px;
+
+    &:last-of-type {
+      margin-bottom: 24px;
+    }
+  }
+
+  @media (max-width: variables.$vp-767) {
+    width: 290px;
+    font-size: 12px;
+    line-height: 18px;
+
+    &:last-of-type {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.form form {
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 180px;
+  justify-content: start;
+  align-items: start;
+  gap: 30px;
+  width: 100%;
+
+  @media (max-width: variables.$vp-1199) {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    max-width: 271px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    gap: 8px;
+    max-width: 290px;
+  }
+}
+
+.form label {
+  width: 100%;
+}
+
+.form input {
+  margin: 0;
+  padding: 17px 29px;
+  display: flex;
+  width: 100%;
+  min-height: 56px;
+  font-family: variables.$ff-placeholder;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  color: variables.$color-default-black;
+  border: 1px solid transparent;
+  border-radius: 2px;
+
+  &::placeholder {
+    font-family: variables.$ff-placeholder;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    color: variables.$color-default-black;
+    opacity: 0.5;
+  }
+
+  @media (max-width: variables.$vp-1199) {
+    padding: 14px;
+    min-height: 50px;
+    border-radius: 0;
+  }
+
+  @include hover {
+    border-color: variables.$color-primary-1;
+    color: variables.$color-primary-1;
+
+    &::placeholder {
+      color: variables.$color-primary-1;
+      opacity: 1;
+    }
+  }
+
+  @include focus {
+    border-color: variables.$color-secondary-1;
+    color: variables.$color-default-black;
+    outline: none;
+
+    &::placeholder {
+      color: variables.$color-default-black;
+      opacity: 0.5;
+    }
+  }
+
+  &:active {
+    border-color: variables.$color-secondary-1;
+    color: variables.$color-default-black;
+
+    &::placeholder {
+      color: variables.$color-default-black;
+      opacity: 0.5;
+    }
+  }
+
+  &:active:hover {
+    border-color: variables.$color-secondary-1;
+    color: variables.$color-default-black;
+
+    &::placeholder {
+      color: variables.$color-default-black;
+      opacity: 0.5;
+    }
+  }
+
+  &:disabled {
+    border-color: rgba(2, 102, 193, 0.1);
+
+    &::placeholder {
+      color: variables.$color-primary-1;
+      opacity: 0.5;
+    }
+  }
+
+  &:invalid {
+    border-color: #ff121f;
+  }
+}
+
+.form__button {
+  @media (max-width: variables.$vp-1199) {
+    width: 100%;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    padding: 22px 21px 20px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
