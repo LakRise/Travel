@@ -1075,16 +1075,16 @@
           <div class="form__container container">
             <h2>Остались вопросы?</h2>
             <p>Заполните форму и наш оператор свяжется с вами для консультации.</p>
-            <form action="https://echo.htmlacademy.ru" method="post">
+            <form action="https://echo.htmlacademy.ru" method="post" data-form="form">
               <label>
                 <span class="visually-hidden">Введите ваш телефон.</span>
-                <input type="text" name="phone" placeholder="Телефон">
+                <input type="tel" name="phone" placeholder="Телефон" data-form="tel">
               </label>
               <label>
                 <span class="visually-hidden">Введите ваш email.</span>
-                <input type="text" name="email" placeholder="Email">
+                <input type="text" name="email" placeholder="Email" data-form="email">
               </label>
-              <button class="form__button btn" type="submit">
+              <button class="form__button btn" type="submit" data-form="submit">
                 <span>Отправить</span>
               </button>
             </form>

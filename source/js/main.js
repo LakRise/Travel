@@ -8,6 +8,7 @@ import {setSwiperCoaching} from './modules/coaching-swiper';
 import {setSwiperFeedback} from './modules/feedback-swiper';
 import {setSwiperAdvantages} from './modules/advantages-swiper';
 import {setSwiperGallery} from './modules/gallery-swiper';
+import {setFormValidation} from './modules/form-validate';
 
 // ---------------------------------
 
@@ -26,6 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
   setSwiperFeedback();
   setSwiperAdvantages();
   setSwiperGallery();
+  setFormValidation();
 
   // Modules
   // ---------------------------------
