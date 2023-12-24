@@ -1,0 +1,271 @@
+@use "../variables.scss";
+@use "../mixins.scss" as *;
+
+.contacts {
+  overflow: hidden;
+  padding: 88px 0 94px;
+
+  @media (max-width: variables.$vp-1199) {
+    padding: 57px 0 39px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    padding: 47px 0 39px;
+  }
+}
+
+.contacts__container {
+  display: grid;
+  grid-template-columns: 500px 585px;
+  justify-content: space-between;
+  align-items: start;
+  gap: 20px;
+
+  @media (max-width: variables.$vp-1199) {
+    padding: 0 43px 0 45px;
+    display: block;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    padding: 0 15px;
+  }
+}
+
+.contacts__content-wrapper {
+  @media (max-width: variables.$vp-1199) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    margin-bottom: 27px;
+  }
+}
+
+.contacts h2 {
+  @include section-title;
+
+  margin: 0 0 23px;
+
+  &::before {
+    bottom: -4px;
+  }
+
+  @media (max-width: variables.$vp-1199) {
+    margin-bottom: 19px;
+    padding: 0 2px 0 0;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    margin-bottom: 11px;
+    padding: 0;
+
+    &::before {
+      bottom: 0;
+    }
+  }
+}
+
+.contacts p {
+  margin: 0 0 10px;
+
+  &:last-of-type {
+    margin-bottom: 49px;
+  }
+
+  @media (max-width: variables.$vp-1199) {
+    max-width: 480px;
+
+    &:last-of-type {
+      margin-bottom: 39px;
+    }
+  }
+
+  @media (max-width: variables.$vp-767) {
+    max-width: 320px;
+
+    &:last-of-type {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.contacts__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 34px;
+  list-style-type: none;
+
+  @media (max-width: variables.$vp-1199) {
+    margin: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 20px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    flex-direction: column;
+    gap: 31px;
+    max-width: 290px;
+  }
+}
+
+.contacts__item {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+  align-items: start;
+  gap: 30px;
+
+  @media (max-width: variables.$vp-1199) {
+    gap: 10px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    max-width: 185px;
+  }
+}
+
+.contacts__item img {
+  transform: translateY(-1px);
+  grid-column: 1;
+  align-self: center;
+
+  @media (max-width: variables.$vp-1199) {
+    transform: translate(0);
+    width: 24px;
+    height: 24px;
+    align-self: start;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.contacts__item-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 9px;
+
+  @media (max-width: variables.$vp-1199) {
+    gap: 5px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    gap: 7px;
+  }
+}
+
+.contacts__item-content-wrapper h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 18px;
+
+  @media (max-width: variables.$vp-1199) {
+    padding-top: 1px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    padding: 0;
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.contacts__item-content-wrapper a {
+  margin: 0;
+  display: flex;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: variables.$color-default-black;
+  text-decoration: none;
+
+  @media (max-width: variables.$vp-1199) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    line-height: 20px;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:active:hover:focus-visible {
+    opacity: 0.6;
+  }
+
+  &--disabled {
+    opacity: 0.3;
+  }
+}
+
+.contacts__item-content-wrapper p {
+  margin: 0;
+
+  &:last-of-type {
+    margin: 0;
+  }
+
+  @media (max-width: variables.$vp-1199) {
+    font-size: 14px;
+    line-height: 22px;
+    max-width: 270px;
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
+  @media (max-width: variables.$vp-767) {
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+}
+
+.contacts__map {
+  transform: translateY(-1px);
+  width: 100%;
+  height: 324px;
+  align-self: end;
+
+  @media (max-width: variables.$vp-1199) {
+    transform: translate(0);
+    margin: 0 -43px 0 -45px;
+    width: calc(100% + 88px);
+    height: 340px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    margin: 0 -15px;
+    width: calc(100% + 30px);
+    height: 320px;
+  }
+}
+
+.contacts__map img {
+  @media (max-width: variables.$vp-1199) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

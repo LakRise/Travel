@@ -1090,107 +1090,118 @@
             </form>
           </div>
         </section>
+      </main>
+      <footer class="page-footer" data-test="footer">
         <section class="contacts">
-          <div class="container">
+          <div class="contacts__container container">
             <div class="contacts__content-wrapper">
-              <h2>Контакты</h2>
-              <p>Свяжитесь с нами любым удобным для вас способом или приходите к нам в гости. Мы будем рады поделиться увлекательными
-              историями и подобрать для вас тур.</p>
+              <h2 data-title="Контакты">Контакты</h2>
+              <p>Свяжитесь с нами любым удобным для вас способом или приходите к нам в гости. Мы будем рады поделиться
+                увлекательными
+                историями и подобрать для вас тур.</p>
               <ul class="contacts__list">
                 <li class="contacts__item">
                   <img src="img/svg/phone.svg" width="26" height="26" alt="">
-                  <div>
+                  <div class="contacts__item-content-wrapper">
                     <h3>Телефон</h3>
                     <a href="+79837454545">+7 983 745-45-45</a>
                   </div>
                 </li>
                 <li class="contacts__item">
                   <img src="img/svg/mail.svg" width="26" height="26" alt="">
-                  <div>
+                  <div class="contacts__item-content-wrapper">
                     <h3>Email</h3>
                     <a href="info@lifetour.com">info@lifetour.com</a>
                   </div>
                 </li>
                 <li class="contacts__item">
                   <img src="img/svg/pin-stroke.svg" width="26" height="26" alt="">
-                  <div>
+                  <div class="contacts__item-content-wrapper">
                     <h3>Адрес</h3>
                     <p>г. Москва, пр-т Мира, д. 14, офис 101</p>
                   </div>
                 </li>
               </ul>
             </div>
-            <picture>
-              <source type="image/webp" media="(max-width=1199px)" srcset="img/map-tablet-1x.webp 1x,
-              img/map-tablet-2x.webp 2x">
-              <source type="image/webp" srcset="img/map-desktop-1x.webp 1x,
-              img/map-desktop-2x.webp 2x">
-              <source type="image/jpg" media="(max-width=1199px)" srcset="img/map-tablet-1x.jpg 1x,
-              img/map-tablet-2x.jpg 2x">
-              <img src="img/map-desktop-1x.jpg" srcset="img/map-desktop-2x.jpg 2x" width="585" height="384"
-              alt="Наше местоположение.">
-            </picture>
+            <div class="contacts__map">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/map-mobile-1x.webp 1x,
+                img/map-mobile-2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1199px)" srcset="img/map-768-1x.webp 1x,
+                img/map-768-2x.webp 2x">
+                <source type="image/webp" srcset="img/map-desktop-1x.webp 1x,
+                img/map-desktop-2x.webp 2x">
+                <source type="image/jpg" media="(max-width: 767px)" srcset="img/map-mobile-1x.webp 1x,
+                img/map-mobile-2x.webp 2x">
+                <source type="image/jpg" media="(max-width: 1199px)" srcset="img/map-768-1x.jpg 1x,
+                img/map-768-2x.jpg 2x">
+                <img src="img/map-desktop-1x.jpg" srcset="img/map-desktop-2x.jpg 2x" width="585" height="384"
+                alt="Наше местоположение.">
+              </picture>
+            </div>
           </div>
         </section>
-      </main>
-      <footer class="page-footer">
-        <div class="container">
-          <a class="page-footer__logo" href="index.html">
-            <svg aria-hidden="true" focusable="false" width="200" height="60" fill="currentColor">
-              <use href="img/sprite.svg#logo"></use>
-            </svg>
-          </a>
-          <nav class="page-footer__navigation">
-            <ul class="page-footer__navigation-list">
-              <li class="page-footer__navigation-item">
-                <a class="page-footer__navigation-link" href="#">Туры</a>
+        <section class="footer-links">
+          <div class="footer-links__container container">
+            <a class="footer-links__logo" href="index.html">
+              <svg aria-hidden="true" focusable="false" width="142" height="42" fill="currentColor">
+                <use href="img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <nav class="footer-links__navigation">
+              <ul class="footer-links__navigation-list">
+                <li class="footer-links__navigation-item">
+                  <a class="footer-links__navigation-link" href="#">Туры</a>
+                </li>
+                <li class="footer-links__navigation-item">
+                  <a class="footer-links__navigation-link" href="#">Обучение</a>
+                </li>
+                <li class="footer-links__navigation-item">
+                  <a class="footer-links__navigation-link" href="#">О нас</a>
+                </li>
+              </ul>
+              <ul class="footer-links__navigation-list">
+                <li class="footer-links__navigation-item">
+                  <a class="footer-links__navigation-link" href="#">Отзывы</a>
+                </li>
+                <li class="footer-links__navigation-item">
+                  <a class="footer-links__navigation-link" href="#">Фотографии</a>
+                </li>
+                <li class="footer-links__navigation-item">
+                  <a class="footer-links__navigation-link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <a class="footer-links__phone-link" href="88007253232">8 800 725-32-32</a>
+            <ul class="footer-links__social-list">
+              <li class="footer-links__social-item">
+                <a class="footer-links__social-link" href="#">
+                  <span class="visually-hidden">vk</span>
+                  <svg aria-hidden="true" focusable="false" width="16" height="9" fill="currentColor">
+                    <use href="img/sprite.svg#vk"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="page-footer__navigation-item">
-                <a class="page-footer__navigation-link" href="#">Обучение</a>
+              <li class="footer-links__social-item">
+                <a class="footer-links__social-link footer-links__social-link--ok" href="#">
+                  <span class="visually-hidden">ok</span>
+                  <svg aria-hidden="true" focusable="false" width="9" height="16" fill="currentColor">
+                    <use href="img/sprite.svg#ok"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="page-footer__navigation-item">
-                <a class="page-footer__navigation-link" href="#">О нас</a>
-              </li>
-              <li class="page-footer__navigation-item">
-                <a class="page-footer__navigation-link" href="#">Отзывы</a>
-              </li>
-              <li class="page-footer__navigation-item">
-                <a class="page-footer__navigation-link" href="#">Фотографии</a>
-              </li>
-              <li class="page-footer__navigation-item">
-                <a class="page-footer__navigation-link" href="#">Контакты</a>
+              <li class="footer-links__social-item">
+                <a class="footer-links__social-link footer-links__social-link--reddit" href="#">
+                  <span class="visually-hidden">reddit</span>
+                  <svg aria-hidden="true" focusable="false" width="14" height="15" fill="currentColor">
+                    <use href="img/sprite.svg#reddit"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </nav>
-          <a class="page-footer__phone-link" href="88007253232">8 800 725-32-32</a>
-          <ul class="page-footer__social-list">
-            <li class="page-footer__social-item">
-              <a class="page-footer__social-link">
-                <span class="visually-hidden">vk</span>
-                <svg aria-hidden="true" focusable="false" width="16" height="9" fill="currentColor">
-                  <use href="img/sprite.svg#vk"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="page-footer__social-item">
-              <a class="page-footer__social-link">
-                <span class="visually-hidden">ok</span>
-                <svg aria-hidden="true" focusable="false" width="9" height="16" fill="currentColor">
-                  <use href="img/sprite.svg#ok"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="page-footer__social-item">
-              <a class="page-footer__social-link">
-                <span class="visually-hidden">reddit</span>
-                <svg aria-hidden="true" focusable="false" width="14" height="15" fill="currentColor">
-                  <use href="img/sprite.svg#reddit"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-          <a class="page-footer__terms-link" href="#">Политика конфиденциальности</a>
-        </div>
+            <a class="footer-links__terms" href="#">Политика конфиденциальности</a>
+          </div>
+        </section>
       </footer>
     </div>
     <script src="js/vendor.min.js"></script>

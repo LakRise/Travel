@@ -4,14 +4,11 @@ const email = form.querySelector('[data-form="email"');
 const button = form.querySelector('[data-form="submit"]');
 
 const validateItem = (item, value, expression, message) => {
-  let found = false;
   if (!expression.test(value)) {
     item.setCustomValidity(message);
   } else {
     item.setCustomValidity('');
-    found = true;
   }
-  return found;
 };
 
 const validateTel = () => {
