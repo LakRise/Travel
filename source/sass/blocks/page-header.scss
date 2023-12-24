@@ -74,7 +74,7 @@
     top: calc(100% - 1px);
     bottom: 0;
     left: 0;
-    padding: 35px 45px 72px 45px;
+    padding: 35px 45px 72px;
     display: block;
     width: 100%;
     max-width: none;
@@ -83,7 +83,7 @@
   }
 
   @media (max-width: variables.$vp-767) {
-    padding: 17px 15px 53px 15px;
+    padding: 17px 15px 53px;
   }
 }
 
@@ -288,7 +288,7 @@
 }
 
 .page-header__menu {
-  margin: -3px 0 -3px;
+  margin: -3px 0;
   padding: 0 10px 0 0;
   display: flex;
   justify-content: flex-start;

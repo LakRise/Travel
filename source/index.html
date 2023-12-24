@@ -25,26 +25,27 @@
                   <svg aria-hidden="true" focusable="false" width="142" height="42" fill="currentColor">
                     <use href="img/sprite.svg#logo"></use>
                   </svg>
+                  <span class="visually-hidden">Логотип компании.</span>
                 </a>
                 <nav class="page-header__navigation">
                   <ul class="page-header__menu" data-menu="menu">
                     <li class="page-header__menu-item">
-                      <a class="page-header__menu-link" href="#" data-menu="link">Туры</a>
+                      <a class="page-header__menu-link" href="#tours" data-menu="link">Туры</a>
                     </li>
                     <li class="page-header__menu-item">
-                      <a class="page-header__menu-link" href="#" data-menu="link">Обучение</a>
+                      <a class="page-header__menu-link" href="#coaching" data-menu="link">Обучение</a>
                     </li>
                     <li class="page-header__menu-item">
-                      <a class="page-header__menu-link" href="#" data-menu="link">О нас</a>
+                      <a class="page-header__menu-link" href="#about" data-menu="link">О нас</a>
                     </li>
                     <li class="page-header__menu-item">
-                      <a class="page-header__menu-link" href="#" data-menu="link">Отзывы</a>
+                      <a class="page-header__menu-link" href="#feedback" data-menu="link">Отзывы</a>
                     </li>
                     <li class="page-header__menu-item">
-                      <a class="page-header__menu-link" href="#" data-menu="link">Фотографии</a>
+                      <a class="page-header__menu-link" href="#gallery" data-menu="link">Фотографии</a>
                     </li>
                     <li class="page-header__menu-item">
-                      <a class="page-header__menu-link" href="#" data-menu="link">Контакты</a>
+                      <a class="page-header__menu-link" href="#contacts" data-menu="link">Контакты</a>
                     </li>
                   </ul>
                 </nav>
@@ -58,9 +59,9 @@
               <div class="swiper-wrapper">
                 <div class="hero__swiper-slide swiper-slide">
                   <div class="hero__swiper-container container">
-                    <h3>Захватывающие вершины Кавказа</h2>
+                    <h3>Захватывающие вершины Кавказа</h3>
                     <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите&nbsp;<br>восход на вершину горы Чегет.</p>
-                    <button class="hero__swiper-button btn">Смотреть тур</button>
+                    <button class="hero__swiper-button btn" type="button">Смотреть тур</button>
                     <ul class="hero__features">
                       <li class="hero__feature">
                         <img src="img/svg/moon.svg" width="12" height="12" alt="">
@@ -82,7 +83,7 @@
                         <img src="img/video-overlay-desktop-1x.jpg" srcset="img/video-overlay-desktop-2x.jpg 2x" width="482" height="317"
                         alt="">
                       </picture>
-                      <iframe class="hero__video" src="" title="video" width="482" height="317"
+                      <iframe class="hero__video" title="video" width="482" height="317"
                         loading="lazy" data-hero="video"></iframe>
                       <button class="hero__video-button" type="button" data-hero="video-button">
                         <svg aria-hidden="true" focusable="false" width="12" height="22" fill="currentColor">
@@ -110,10 +111,10 @@
                 </div>
                 <div class="hero__swiper-slide hero__swiper-slide--alt-padding swiper-slide">
                   <div class="hero__swiper-container container">
-                    <h3>Невероятная&nbsp;<br>природа Камчатки</h2>
+                    <h3>Невероятная&nbsp;<br>природа Камчатки</h3>
                     <p>Незабываемое приключение,&nbsp;<br>во время которого вы отправитесь в путешествие по одному из самых нетронутых уголков дикой
                     природы в мире.</p>
-                    <button class="hero__swiper-button btn">Смотреть тур</button>
+                    <button class="hero__swiper-button btn" type="button">Смотреть тур</button>
                     <ul class="hero__features">
                       <li class="hero__feature">
                         <img src="img/svg/moon.svg" width="12" height="12" alt="">
@@ -155,10 +156,10 @@
                 </div>
                 <div class="hero__swiper-slide swiper-slide">
                   <div class="hero__swiper-container container">
-                    <h3>Магические пейзажи Алтайского Края</h2>
+                    <h3>Магические пейзажи Алтайского Края</h3>
                     <p>Алтайский трекинг-тур — это захватывающее приключение с посещением магических и захватывающих дух ландшафтов
                     Алтайских гор.</p>
-                    <button class="hero__swiper-button btn">Смотреть тур</button>
+                    <button class="hero__swiper-button btn" type="button">Смотреть тур</button>
                     <ul class="hero__features">
                       <li class="hero__feature">
                         <img src="img/svg/moon.svg" width="12" height="12" alt="">
@@ -177,7 +178,7 @@
                         alt="">
                       </picture>
                       <button class="hero__audio-button" type="button" data-hero="audio-button">
-                        <img src="img/svg/play.svg" with="47" height="47" alt="">
+                        <img src="img/svg/play.svg" width="47" height="47" alt="">
                         <span class="visually-hidden">Запустить аудио.</span>
                       </button>
                       <iframe class="hero__audio" src="https://music.yandex.ru/iframe/album/25474374?dir=desc&activeTab=track-list" title="audio"
@@ -223,18 +224,18 @@
               alt="">
             </picture>
           </div>
-          <section class="tours" data-test="tours">
+          <section class="tours" data-test="tours" id="tours">
             <div class="container">
               <div class="tours__header-wrapper">
                 <h2 class="tours__title" data-title="Ближайшие туры">Ближайшие туры</h2>
                 <div class="tours__swiper-button-wrapper">
-                  <button class="tours__swiper-button arrow-button" data-tours="previous">
+                  <button class="tours__swiper-button arrow-button" type="button" data-tours="previous">
                     <span class="visually-hidden">Предыдущий слайд.</span>
                     <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
                       <use href="img/sprite.svg#left"></use>
                     </svg>
                   </button>
-                  <button class="tours__swiper-button arrow-button" data-tours="next">
+                  <button class="tours__swiper-button arrow-button" type="button" data-tours="next">
                     <span class="visually-hidden">Следующий слайд.</span>
                     <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
                       <use href="img/sprite.svg#right"></use>
@@ -480,7 +481,7 @@
               </a>
             </div>
           </section>
-          <section class="coaching" data-test="training">
+          <section class="coaching" data-test="training" id="coaching">
             <div class="container">
               <h2 data-title="Обучение">Обучение</h2>
               <p>Обучение проводится квалифицированными специалистами, за плечами которых десятки пройденных маршрутов Кавказа, Крыма,
@@ -488,13 +489,13 @@
               <div class="coaching__swiper-header">
                 <h3 class="coaching__swiper-title">Наши инструкторы</h3>
                 <div class="coaching__button-wrapper">
-                  <button class="coaching__swiper-button arrow-button" data-coaching="previous">
+                  <button class="coaching__swiper-button arrow-button" type="button" data-coaching="previous">
                     <span class="visually-hidden">Предыдущий слайд.</span>
                     <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
                       <use href="img/sprite.svg#left"></use>
                     </svg>
                   </button>
-                  <button class="coaching__swiper-button arrow-button" data-coaching="next">
+                  <button class="coaching__swiper-button arrow-button" type="button" data-coaching="next">
                     <span class="visually-hidden">Следующий слайд.</span>
                     <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
                       <use href="img/sprite.svg#right"></use>
@@ -667,7 +668,7 @@
             </div>
           </section>
         </div>
-        <section class="about" data-test="about">
+        <section class="about" data-test="about" id="about">
           <div class="about__background-wrapper">
             <picture>
               <source type="image/webp" media="(max-width: 767px)" srcset="img/about-mobile-1x.webp 1x,
@@ -684,6 +685,13 @@
               alt="Фотография с одного из наших походов.">
             </picture>
           </div>
+          <div class="about__clouds-wrapper">
+            <picture>
+              <source type="image/webp" srcset="img/clouds-2-1x.webp 1x,
+              img/clouds-2-2x.webp 2x">
+              <img src="img/clouds-2-1x.png" srcset="img/clouds-2-2x.png 2x" width="620" height="280" alt="">
+            </picture>
+          </div>
           <div class="container">
             <div class="about__wrapper">
               <h2 data-title="О нас">О нас</h2>
@@ -698,18 +706,18 @@
             </div>
           </div>
         </section>
-        <section class="feedback" data-test="reviews">
+        <section class="feedback" data-test="reviews" id="feedback">
           <div class="container">
             <div class="feedback__header-wrapper">
               <h2 data-title="Отзывы">Отзывы</h2>
               <div class="feedback__swiper-button-wrapper">
-                <button class="feedback__swiper-button arrow-button" data-feedback="previous">
+                <button class="feedback__swiper-button arrow-button" type="button" data-feedback="previous">
                   <span class="visually-hidden">Предыдущий слайд.</span>
                   <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
                     <use href="img/sprite.svg#left"></use>
                   </svg>
                 </button>
-                <button class="feedback__swiper-button arrow-button" data-feedback="next">
+                <button class="feedback__swiper-button arrow-button" type="button" data-feedback="next">
                   <span class="visually-hidden">Следующий слайд.</span>
                   <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
                     <use href="img/sprite.svg#right"></use>
@@ -902,13 +910,13 @@
               </div>
             </div>
             <div class="advantages__swiper-button-wrapper">
-              <button class="advantages__swiper-button arrow-button" data-advantages="previous">
+              <button class="advantages__swiper-button arrow-button" type="button" data-advantages="previous">
                 <span class="visually-hidden">Предыдущий слайд.</span>
                 <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
                   <use href="img/sprite.svg#left"></use>
                 </svg>
               </button>
-              <button class="advantages__swiper-button arrow-button" data-advantages="next">
+              <button class="advantages__swiper-button arrow-button" type="button" data-advantages="next">
                 <span class="visually-hidden">Следующий слайд.</span>
                 <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
                   <use href="img/sprite.svg#right"></use>
@@ -917,20 +925,20 @@
             </div>
           </div>
         </section>
-        <section class="gallery" data-test="gallery">
+        <section class="gallery" data-test="gallery" id="gallery">
           <div class="gallery__container container">
             <h2 data-title="Фотогалерея">Фотогалерея</h2>
             <div class="gallery__swiper-header-wrapper">
               <p>Добавляйте фото в Instagram с хэштегом #лайфтур, а также отмечайте нас на фото.
               <br>Лучшие фотографии украсят этот раздел нашего сайта.</p>
               <div class="gallery__swiper-button-wrapper">
-                <button class="gallery__swiper-button arrow-button" data-gallery="previous">
+                <button class="gallery__swiper-button arrow-button" type="button" data-gallery="previous">
                   <span class="visually-hidden">Предыдущий слайд.</span>
                   <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
                     <use href="img/sprite.svg#left"></use>
                   </svg>
                 </button>
-                <button class="gallery__swiper-button arrow-button" data-gallery="next">
+                <button class="gallery__swiper-button arrow-button" type="button" data-gallery="next">
                   <span class="visually-hidden">Следующий слайд.</span>
                   <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
                     <use href="img/sprite.svg#right"></use>
@@ -1092,7 +1100,7 @@
         </section>
       </main>
       <footer class="page-footer" data-test="footer">
-        <section class="contacts">
+        <section class="contacts" id="contacts">
           <div class="contacts__container container">
             <div class="contacts__content-wrapper">
               <h2 data-title="Контакты">Контакты</h2>
@@ -1142,33 +1150,35 @@
           </div>
         </section>
         <section class="footer-links">
+          <h2 class="visually-hidden">Навигация и ссылки.</h2>
           <div class="footer-links__container container">
             <a class="footer-links__logo" href="index.html">
               <svg aria-hidden="true" focusable="false" width="142" height="42" fill="currentColor">
                 <use href="img/sprite.svg#logo"></use>
               </svg>
+              <span class="visually-hidden">Логотип компании.</span>
             </a>
             <nav class="footer-links__navigation">
               <ul class="footer-links__navigation-list">
                 <li class="footer-links__navigation-item">
-                  <a class="footer-links__navigation-link" href="#">Туры</a>
+                  <a class="footer-links__navigation-link" href="#tours">Туры</a>
                 </li>
                 <li class="footer-links__navigation-item">
-                  <a class="footer-links__navigation-link" href="#">Обучение</a>
+                  <a class="footer-links__navigation-link" href="#coaching">Обучение</a>
                 </li>
                 <li class="footer-links__navigation-item">
-                  <a class="footer-links__navigation-link" href="#">О нас</a>
+                  <a class="footer-links__navigation-link" href="#about">О нас</a>
                 </li>
               </ul>
               <ul class="footer-links__navigation-list">
                 <li class="footer-links__navigation-item">
-                  <a class="footer-links__navigation-link" href="#">Отзывы</a>
+                  <a class="footer-links__navigation-link" href="#feedback">Отзывы</a>
                 </li>
                 <li class="footer-links__navigation-item">
-                  <a class="footer-links__navigation-link" href="#">Фотографии</a>
+                  <a class="footer-links__navigation-link" href="#gallery">Фотографии</a>
                 </li>
                 <li class="footer-links__navigation-item">
-                  <a class="footer-links__navigation-link" href="#">Контакты</a>
+                  <a class="footer-links__navigation-link" href="#contacts">Контакты</a>
                 </li>
               </ul>
             </nav>

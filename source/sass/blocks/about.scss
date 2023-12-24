@@ -45,6 +45,25 @@
   }
 }
 
+.about__clouds-wrapper {
+  position: absolute;
+  top: -110px;
+  right: 0;
+  z-index: -1;
+  width: 620px;
+  height: 280px;
+
+  @media (max-width: variables.$vp-1199) {
+    display: none;
+  }
+}
+
+.about__clouds-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .about__wrapper {
   margin: 0 0 0 615px;
   padding: 23px 0 0;

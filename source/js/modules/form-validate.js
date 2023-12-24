@@ -18,7 +18,7 @@ const validateTel = () => {
 };
 
 const validateEmail = () => {
-  const expression = /^[A-za-zА-яа-я0-9_\-\.]+@([A-za-zА-яа-я0-9_-]+\.)+[A-za-zА-яа-я-]{2,}$/gm;
+  const expression = /^[A-za-zА-яа-я0-9_-]+@([A-za-zА-яа-я0-9_-]+\.)+[A-za-zА-яа-я-]{2,}$/gm;
   validateItem(email, email.value, expression, 'Неверный email.');
 };
 

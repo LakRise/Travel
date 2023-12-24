@@ -2,7 +2,7 @@
 @use "../mixins.scss" as *;
 
 .footer-links {
-  padding: 31px 0 31px;
+  padding: 31px 0;
   border-top: 1px solid rgba(45, 56, 63, 0.2);
 
   @media (max-width: variables.$vp-1199) {
@@ -99,7 +99,7 @@
 }
 
 .footer-links__navigation-list {
-  margin: -3px 0 -3px;
+  margin: -3px 0;
   padding: 0;
   display: flex;
   justify-content: flex-start;
