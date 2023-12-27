@@ -6,16 +6,21 @@ const setSwiperFeedback = () => {
     loop: true,
     autoHeight: false,
     initialSlide: 0,
-    slidesPerView: 'auto',
+    grid: {
+      rows: 1,
+    },
     breakpoints: {
       1200: {
         spaceBetween: 120,
+        slidesPerView: 'auto',
       },
       768: {
         spaceBetween: 30,
+        slidesPerView: 'auto',
       },
       320: {
         spaceBetween: 40,
+        slidesPerView: 1,
       },
     },
     navigation: {

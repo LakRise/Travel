@@ -5,12 +5,26 @@ const setSwiperHero = () => {
     direction: 'horizontal',
     loop: true,
     slidesPerView: '1',
-    autoHeight: true,
+    autoHeight: false,
+    grid: {
+      rows: 1,
+    },
     pagination: {
       el: '[data-swiper="hero-pagination"]',
       clickable: true,
       bulletClass: 'hero__pagination-bullet',
       bulletActiveClass: 'hero__pagination-bullet--active',
+    },
+    breakpoints: {
+      1200: {
+        allowTouchMove: false,
+      },
+      768: {
+        allowTouchMove: true,
+      },
+      320: {
+        allowTouchMove: true,
+      },
     },
   });
   return swiperHero;

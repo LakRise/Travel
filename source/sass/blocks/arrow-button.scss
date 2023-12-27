@@ -18,6 +18,7 @@
     background: $color-default-white;
     color: $color-secondary-1;
     box-shadow: inset 1px 1px $color-secondary-1, inset -1px -1px $color-secondary-1;
+    outline: none;
   }
 
   &:active {

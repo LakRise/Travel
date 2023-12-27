@@ -8,6 +8,9 @@ const setSwiperAdvantages = () => {
     initialSlide: 2,
     centeredSlides: true,
     slidesPerView: 'auto',
+    grid: {
+      rows: 1,
+    },
     breakpoints: {
       1200: {
         enabled: true,

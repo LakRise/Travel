@@ -4,13 +4,16 @@
 .about {
   position: relative;
   padding: 56px 0 80px;
+  min-height: 530px;
 
   @media (max-width: variables.$vp-1199) {
     padding: 15px 0 1px;
+    min-height: 541px;
   }
 
   @media (max-width: variables.$vp-767) {
     padding: 0 0 1px;
+    min-height: 400px;
   }
 }
 

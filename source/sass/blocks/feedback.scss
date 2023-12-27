@@ -87,6 +87,11 @@
   }
 }
 
+.feedback__list {
+  display: grid;
+  grid-template-columns: repeat(10000, auto);
+}
+
 .feedback__item {
   padding: 20px 40px 20px 20px;
   display: grid;

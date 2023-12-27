@@ -8,7 +8,7 @@
   align-items: flex-start;
   flex-direction: column;
   gap: 15px;
-  height: 416px;
+  min-height: 416px;
   background: variables.$color-default-black;
   color: variables.$color-default-white;
   overflow: hidden;
@@ -115,10 +115,10 @@
 .tours-card__features {
   margin: 0;
   padding: 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: 84px 84px 69px;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap;
   width: 100%;
   list-style-type: none;
 }

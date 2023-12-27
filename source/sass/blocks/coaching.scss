@@ -2,12 +2,12 @@
 @use "../mixins.scss" as *;
 
 .coaching {
-  padding: 43px 0 2px;
+  padding: 43px 0 1px;
   overflow: hidden;
 
   @media (max-width: variables.$vp-1199) {
     transform: translateY(-2px);
-    padding: 62px 0 47px;
+    padding: 62px 0 46px;
   }
 
   @media (max-width: variables.$vp-767) {
@@ -40,12 +40,12 @@
   max-width: 69%;
 
   @media (max-width: variables.$vp-1199) {
-    margin-bottom: 28px;
+    margin: 0 0 28px;
     max-width: 560px;
   }
 
   @media (max-width: variables.$vp-767) {
-    margin-bottom: 27px;
+    margin: 0 0 27px;
   }
 }
 
@@ -59,6 +59,11 @@
   @media (max-width: variables.$vp-767) {
     margin-bottom: 26px;
   }
+}
+
+.coaching__list {
+  display: grid;
+  grid-template-columns: repeat(10000, auto);
 }
 
 .coaching__swiper-header {
@@ -128,7 +133,7 @@
 
   &::before {
     position: absolute;
-    left: 0;
+    left: 14px;
     right: calc(-50vw + 50%);
     bottom: 13px;
     width: 100vw;
@@ -143,7 +148,8 @@
     justify-content: space-between;
     row-gap: 91px;
     max-width: 596px;
-    overflow: hidden;
+    overflow-x: clip;
+    overflow-y: visible;
 
     &::before {
       display: none;
@@ -155,9 +161,10 @@
     grid-template-columns: 276px;
     row-gap: 25px;
     max-width: 100%;
+    overflow: hidden;
 
     &::before {
-      left: 7px;
+      left: 6px;
       right: auto;
       top: 12px;
       bottom: 12px;
@@ -165,6 +172,12 @@
       width: 1px;
       height: calc(100% - 24px);
     }
+  }
+}
+
+.coaching__program-list + .coaching__program-list {
+  @media (max-width: variables.$vp-1199) {
+    margin-top: 41px;
   }
 }
 
@@ -203,7 +216,7 @@
       order: 4;
     }
 
-    &:nth-child(5n - 3) {
+    &:nth-child(4n - 2) {
       &::before {
         position: absolute;
         left: -100vw;
@@ -220,7 +233,7 @@
       }
     }
 
-    &:nth-child(5n - 2) {
+    &:nth-child(4n - 1) {
       &::after {
         left: 1px;
         bottom: auto;
@@ -238,7 +251,7 @@
       }
     }
 
-    &:nth-child(5n - 1) {
+    &:nth-child(4n) {
       &::after {
         bottom: auto;
         top: -27px;

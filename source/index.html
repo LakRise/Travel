@@ -5,8 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="LifeTour - организация походов в горы.">
-    <title>Travel</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <title>Travel</title>
   </head>
   <body>
     <div class="wrapper">
@@ -56,7 +63,7 @@
           <section class="hero">
             <h2 class="visually-hidden">Наши туры.</h2>
             <div class="hero__swiper swiper" data-swiper="hero">
-              <div class="swiper-wrapper">
+              <div class="hero__list swiper-wrapper">
                 <div class="hero__swiper-slide swiper-slide">
                   <div class="hero__swiper-container container">
                     <h3>Захватывающие вершины Кавказа</h3>
@@ -134,7 +141,7 @@
                         <source type="image/png" media="(max-width: 1199px)" srcset="img/photo-cards-tablet-1x.png 1x,
                         img/photo-cards-tablet-2x.png 2x">
                         <img src="img/photo-cards-desktop-1x.png" srcset="img/photo-cards-desktop-2x.png 2x" width="410" height="459"
-                        alt="Природа Камчатки.">
+                        loading="lazy" alt="Природа Камчатки.">
                       </picture>
                     </div>
                     <div class="hero__swiper-background">
@@ -154,7 +161,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="hero__swiper-slide swiper-slide">
+                <div class="hero__swiper-slide hero__swiper-slide--960 swiper-slide">
                   <div class="hero__swiper-container container">
                     <h3>Магические пейзажи Алтайского Края</h3>
                     <p>Алтайский трекинг-тур — это захватывающее приключение с посещением магических и захватывающих дух ландшафтов
@@ -181,7 +188,7 @@
                         <img src="img/svg/play.svg" width="47" height="47" alt="">
                         <span class="visually-hidden">Запустить аудио.</span>
                       </button>
-                      <iframe class="hero__audio" src="https://music.yandex.ru/iframe/album/25474374?dir=desc&activeTab=track-list" title="audio"
+                      <iframe class="hero__audio" title="audio"
                       width="340" height="220" loading="lazy" data-hero="audio"></iframe>
                     </div>
                     <div class="hero__swiper-background">
@@ -221,7 +228,7 @@
               <source type="image/png" media="(max-width: 1199px)" srcset="img/clouds-1-tablet-1x.png 1x,
               img/clouds-1-tablet-2x.png 2x">
               <img src="img/clouds-1-desktop-1x.png" srcset="img/clouds-1-desktop-2x.png 2x" width="602" height="1630"
-              alt="">
+              loading="lazy" alt="">
             </picture>
           </div>
           <section class="tours" data-test="tours" id="tours">
@@ -244,7 +251,7 @@
                 </div>
               </div>
               <div class="tours__swiper swiper" data-swiper="tours">
-                <div class="swiper-wrapper">
+                <div class="tours__list swiper-wrapper">
                   <div class="tours__item swiper-slide tours-card">
                     <div class="tours-card__background">
                       <picture>
@@ -504,7 +511,7 @@
                 </div>
               </div>
               <div class="coaching__swiper swiper" data-swiper="coaching">
-                <div class="swiper-wrapper">
+                <div class="coaching__list swiper-wrapper">
                   <div class="coaching__swiper-item swiper-slide coach-card">
                     <div class="coach-card__picture-wrapper">
                       <picture>
@@ -682,14 +689,15 @@
               <source type="image/jpg" media="(max-width: 1199px)" srcset="img/about-tablet-1x.jpg 1x,
               img/about-tablet-2x.jpg 2x">
               <img src="img/about-desktop-1x.jpg" srcset="img/about-desktop-2x.jpg 2x" width="808" height="474"
-              alt="Фотография с одного из наших походов.">
+              loading="lazy" alt="Фотография с одного из наших походов.">
             </picture>
           </div>
           <div class="about__clouds-wrapper">
             <picture>
               <source type="image/webp" srcset="img/clouds-2-1x.webp 1x,
               img/clouds-2-2x.webp 2x">
-              <img src="img/clouds-2-1x.png" srcset="img/clouds-2-2x.png 2x" width="620" height="280" alt="">
+              <img src="img/clouds-2-1x.png" srcset="img/clouds-2-2x.png 2x" width="620" height="280"
+              loading="lazy"  alt="">
             </picture>
           </div>
           <div class="container">
@@ -726,7 +734,7 @@
               </div>
             </div>
             <div class="feedback__swiper swiper" data-swiper="feedback">
-              <div class="swiper-wrapper">
+              <div class="feedback__list swiper-wrapper">
                 <div class="feedback__item swiper-slide">
                   <div class="feedback__item-picture-wrapper">
                     <picture>

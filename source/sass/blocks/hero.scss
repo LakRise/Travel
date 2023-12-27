@@ -36,6 +36,11 @@
   overflow-y: visible;
 }
 
+.hero__list {
+  display: grid;
+  grid-template-columns: repeat(10000, auto);
+}
+
 .hero__swiper-slide {
   padding: 200px 0 80px;
   display: flex;
@@ -69,7 +74,7 @@
 
 .hero__swiper-slide h3 {
   margin: 0 0 24px;
-  max-width: 80%;
+  max-width: 810px;
   font-size: 77px;
   font-weight: 800;
   line-height: 77px;
@@ -92,6 +97,18 @@
     br {
       display: none;
     }
+  }
+}
+
+.hero__swiper-slide--960 h3 {
+  max-width: 960px;
+
+  @media (max-width: variables.$vp-1199) {
+    max-width: 860px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    max-width: 540px;
   }
 }
 
@@ -202,10 +219,12 @@
 }
 
 .hero__video-wrapper {
+  top: 329px;
   width: 482px;
   height: 317px;
 
   @media (max-width: variables.$vp-1199) {
+    top: auto;
     width: 442px;
     height: 300px;
   }
@@ -270,6 +289,7 @@
 
   @include hover-focus {
     border-color: variables.$color-secondary-1;
+    outline: none;
   }
 
   &:active {
@@ -312,10 +332,12 @@
 }
 
 .hero__photo-wrapper {
+  top: 187px;
   width: 410px;
   height: 459px;
 
   @media (max-width: variables.$vp-1199) {
+    top: auto;
     width: 442px;
     height: 365px;
   }
@@ -334,8 +356,13 @@
 }
 
 .hero__audio-wrapper {
+  top: 426px;
   width: 340px;
   height: 220px;
+
+  @media (max-width: variables.$vp-1199) {
+    top: auto;
+  }
 }
 
 .hero__audio-wrapper.is-active .hero__audio {
@@ -381,6 +408,7 @@
 
   @include hover-focus {
     opacity: 0.8;
+    outline: none;
   }
 
   &:active {

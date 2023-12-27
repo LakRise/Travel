@@ -8,16 +8,17 @@
   justify-content: flex-start;
   align-items: flex-start;
   gap: 15px;
-  height: 356px;
+  min-height: 356px;
   background: variables.$color-default-white;
   border: 1px solid rgba(2, 102, 193, 0.1);
 
   @media (max-width: variables.$vp-1199) {
-    height: 388px;
+    min-height: 388px;
   }
 
   @media (max-width: variables.$vp-767) {
-    height: 356px;
+    padding: 14px 14px 13px;
+    min-height: 356px;
   }
 }
 
@@ -49,13 +50,18 @@
 }
 
 .coach-card p {
+  transform: translateY(-1px);
   margin: 0;
   font-size: 12px;
   line-height: 16px;
   max-width: 100%;
 
   @media (max-width: variables.$vp-1199) {
-    transform: translateY(-1px);
+    margin: 0;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    margin: 0;
   }
 }
 

@@ -6,6 +6,9 @@ const setSwiperTours = () => {
     loop: false,
     autoHeight: false,
     initialSlide: 1,
+    grid: {
+      rows: 1,
+    },
     breakpoints: {
       1200: {
         spaceBetween: 30,

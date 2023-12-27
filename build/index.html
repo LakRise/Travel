@@ -5,8 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="LifeTour - организация походов в горы.">
-    <title>Travel</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <title>Travel</title>
   </head>
   <body>
     <div class="wrapper">
@@ -25,6 +32,7 @@
                   <svg aria-hidden="true" focusable="false" width="142" height="42" fill="currentColor">
                     <use href="img/sprite.svg#logo"></use>
                   </svg>
+                  <span class="visually-hidden">Логотип компании.</span>
                 </a>
                 <nav class="page-header__navigation">
                   <ul class="page-header__menu" data-menu="menu">
@@ -55,12 +63,12 @@
           <section class="hero">
             <h2 class="visually-hidden">Наши туры.</h2>
             <div class="hero__swiper swiper" data-swiper="hero">
-              <div class="swiper-wrapper">
+              <div class="hero__list swiper-wrapper">
                 <div class="hero__swiper-slide swiper-slide">
                   <div class="hero__swiper-container container">
-                    <h3>Захватывающие вершины Кавказа</h2>
+                    <h3>Захватывающие вершины Кавказа</h3>
                     <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите&nbsp;<br>восход на вершину горы Чегет.</p>
-                    <button class="hero__swiper-button btn">Смотреть тур</button>
+                    <button class="hero__swiper-button btn" type="button">Смотреть тур</button>
                     <ul class="hero__features">
                       <li class="hero__feature">
                         <img src="img/svg/moon.svg" width="12" height="12" alt="">
@@ -82,7 +90,7 @@
                         <img src="img/video-overlay-desktop-1x.jpg" srcset="img/video-overlay-desktop-2x.jpg 2x" width="482" height="317"
                         alt="">
                       </picture>
-                      <iframe class="hero__video" src="" title="video" width="482" height="317"
+                      <iframe class="hero__video" title="video" width="482" height="317"
                         loading="lazy" data-hero="video"></iframe>
                       <button class="hero__video-button" type="button" data-hero="video-button">
                         <svg aria-hidden="true" focusable="false" width="12" height="22" fill="currentColor">
@@ -110,10 +118,10 @@
                 </div>
                 <div class="hero__swiper-slide hero__swiper-slide--alt-padding swiper-slide">
                   <div class="hero__swiper-container container">
-                    <h3>Невероятная&nbsp;<br>природа Камчатки</h2>
+                    <h3>Невероятная&nbsp;<br>природа Камчатки</h3>
                     <p>Незабываемое приключение,&nbsp;<br>во время которого вы отправитесь в путешествие по одному из самых нетронутых уголков дикой
                     природы в мире.</p>
-                    <button class="hero__swiper-button btn">Смотреть тур</button>
+                    <button class="hero__swiper-button btn" type="button">Смотреть тур</button>
                     <ul class="hero__features">
                       <li class="hero__feature">
                         <img src="img/svg/moon.svg" width="12" height="12" alt="">
@@ -133,7 +141,7 @@
                         <source type="image/png" media="(max-width: 1199px)" srcset="img/photo-cards-tablet-1x.png 1x,
                         img/photo-cards-tablet-2x.png 2x">
                         <img src="img/photo-cards-desktop-1x.png" srcset="img/photo-cards-desktop-2x.png 2x" width="410" height="459"
-                        alt="Природа Камчатки.">
+                        loading="lazy" alt="Природа Камчатки.">
                       </picture>
                     </div>
                     <div class="hero__swiper-background">
@@ -153,12 +161,12 @@
                     </div>
                   </div>
                 </div>
-                <div class="hero__swiper-slide swiper-slide">
+                <div class="hero__swiper-slide hero__swiper-slide--960 swiper-slide">
                   <div class="hero__swiper-container container">
-                    <h3>Магические пейзажи Алтайского Края</h2>
+                    <h3>Магические пейзажи Алтайского Края</h3>
                     <p>Алтайский трекинг-тур — это захватывающее приключение с посещением магических и захватывающих дух ландшафтов
                     Алтайских гор.</p>
-                    <button class="hero__swiper-button btn">Смотреть тур</button>
+                    <button class="hero__swiper-button btn" type="button">Смотреть тур</button>
                     <ul class="hero__features">
                       <li class="hero__feature">
                         <img src="img/svg/moon.svg" width="12" height="12" alt="">
@@ -177,10 +185,10 @@
                         alt="">
                       </picture>
                       <button class="hero__audio-button" type="button" data-hero="audio-button">
-                        <img src="img/svg/play.svg" with="47" height="47" alt="">
+                        <img src="img/svg/play.svg" width="47" height="47" alt="">
                         <span class="visually-hidden">Запустить аудио.</span>
                       </button>
-                      <iframe class="hero__audio" src="https://music.yandex.ru/iframe/album/25474374?dir=desc&activeTab=track-list" title="audio"
+                      <iframe class="hero__audio" title="audio"
                       width="340" height="220" loading="lazy" data-hero="audio"></iframe>
                     </div>
                     <div class="hero__swiper-background">
@@ -220,7 +228,7 @@
               <source type="image/png" media="(max-width: 1199px)" srcset="img/clouds-1-tablet-1x.png 1x,
               img/clouds-1-tablet-2x.png 2x">
               <img src="img/clouds-1-desktop-1x.png" srcset="img/clouds-1-desktop-2x.png 2x" width="602" height="1630"
-              alt="">
+              loading="lazy" alt="">
             </picture>
           </div>
           <section class="tours" data-test="tours" id="tours">
@@ -228,13 +236,13 @@
               <div class="tours__header-wrapper">
                 <h2 class="tours__title" data-title="Ближайшие туры">Ближайшие туры</h2>
                 <div class="tours__swiper-button-wrapper">
-                  <button class="tours__swiper-button arrow-button" data-tours="previous">
+                  <button class="tours__swiper-button arrow-button" type="button" data-tours="previous">
                     <span class="visually-hidden">Предыдущий слайд.</span>
                     <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
                       <use href="img/sprite.svg#left"></use>
                     </svg>
                   </button>
-                  <button class="tours__swiper-button arrow-button" data-tours="next">
+                  <button class="tours__swiper-button arrow-button" type="button" data-tours="next">
                     <span class="visually-hidden">Следующий слайд.</span>
                     <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
                       <use href="img/sprite.svg#right"></use>
@@ -243,7 +251,7 @@
                 </div>
               </div>
               <div class="tours__swiper swiper" data-swiper="tours">
-                <div class="swiper-wrapper">
+                <div class="tours__list swiper-wrapper">
                   <div class="tours__item swiper-slide tours-card">
                     <div class="tours-card__background">
                       <picture>
@@ -488,13 +496,13 @@
               <div class="coaching__swiper-header">
                 <h3 class="coaching__swiper-title">Наши инструкторы</h3>
                 <div class="coaching__button-wrapper">
-                  <button class="coaching__swiper-button arrow-button" data-coaching="previous">
+                  <button class="coaching__swiper-button arrow-button" type="button" data-coaching="previous">
                     <span class="visually-hidden">Предыдущий слайд.</span>
                     <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
                       <use href="img/sprite.svg#left"></use>
                     </svg>
                   </button>
-                  <button class="coaching__swiper-button arrow-button" data-coaching="next">
+                  <button class="coaching__swiper-button arrow-button" type="button" data-coaching="next">
                     <span class="visually-hidden">Следующий слайд.</span>
                     <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
                       <use href="img/sprite.svg#right"></use>
@@ -503,7 +511,7 @@
                 </div>
               </div>
               <div class="coaching__swiper swiper" data-swiper="coaching">
-                <div class="swiper-wrapper">
+                <div class="coaching__list swiper-wrapper">
                   <div class="coaching__swiper-item swiper-slide coach-card">
                     <div class="coach-card__picture-wrapper">
                       <picture>
@@ -681,14 +689,15 @@
               <source type="image/jpg" media="(max-width: 1199px)" srcset="img/about-tablet-1x.jpg 1x,
               img/about-tablet-2x.jpg 2x">
               <img src="img/about-desktop-1x.jpg" srcset="img/about-desktop-2x.jpg 2x" width="808" height="474"
-              alt="Фотография с одного из наших походов.">
+              loading="lazy" alt="Фотография с одного из наших походов.">
             </picture>
           </div>
           <div class="about__clouds-wrapper">
             <picture>
               <source type="image/webp" srcset="img/clouds-2-1x.webp 1x,
               img/clouds-2-2x.webp 2x">
-              <img src="img/clouds-2-1x.png" srcset="img/clouds-2-2x.png 2x" width="620" height="280" alt="">
+              <img src="img/clouds-2-1x.png" srcset="img/clouds-2-2x.png 2x" width="620" height="280"
+              loading="lazy"  alt="">
             </picture>
           </div>
           <div class="container">
@@ -710,13 +719,13 @@
             <div class="feedback__header-wrapper">
               <h2 data-title="Отзывы">Отзывы</h2>
               <div class="feedback__swiper-button-wrapper">
-                <button class="feedback__swiper-button arrow-button" data-feedback="previous">
+                <button class="feedback__swiper-button arrow-button" type="button" data-feedback="previous">
                   <span class="visually-hidden">Предыдущий слайд.</span>
                   <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
                     <use href="img/sprite.svg#left"></use>
                   </svg>
                 </button>
-                <button class="feedback__swiper-button arrow-button" data-feedback="next">
+                <button class="feedback__swiper-button arrow-button" type="button" data-feedback="next">
                   <span class="visually-hidden">Следующий слайд.</span>
                   <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
                     <use href="img/sprite.svg#right"></use>
@@ -725,7 +734,7 @@
               </div>
             </div>
             <div class="feedback__swiper swiper" data-swiper="feedback">
-              <div class="swiper-wrapper">
+              <div class="feedback__list swiper-wrapper">
                 <div class="feedback__item swiper-slide">
                   <div class="feedback__item-picture-wrapper">
                     <picture>
@@ -909,13 +918,13 @@
               </div>
             </div>
             <div class="advantages__swiper-button-wrapper">
-              <button class="advantages__swiper-button arrow-button" data-advantages="previous">
+              <button class="advantages__swiper-button arrow-button" type="button" data-advantages="previous">
                 <span class="visually-hidden">Предыдущий слайд.</span>
                 <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
                   <use href="img/sprite.svg#left"></use>
                 </svg>
               </button>
-              <button class="advantages__swiper-button arrow-button" data-advantages="next">
+              <button class="advantages__swiper-button arrow-button" type="button" data-advantages="next">
                 <span class="visually-hidden">Следующий слайд.</span>
                 <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
                   <use href="img/sprite.svg#right"></use>
@@ -931,13 +940,13 @@
               <p>Добавляйте фото в Instagram с хэштегом #лайфтур, а также отмечайте нас на фото.
               <br>Лучшие фотографии украсят этот раздел нашего сайта.</p>
               <div class="gallery__swiper-button-wrapper">
-                <button class="gallery__swiper-button arrow-button" data-gallery="previous">
+                <button class="gallery__swiper-button arrow-button" type="button" data-gallery="previous">
                   <span class="visually-hidden">Предыдущий слайд.</span>
                   <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
                     <use href="img/sprite.svg#left"></use>
                   </svg>
                 </button>
-                <button class="gallery__swiper-button arrow-button" data-gallery="next">
+                <button class="gallery__swiper-button arrow-button" type="button" data-gallery="next">
                   <span class="visually-hidden">Следующий слайд.</span>
                   <svg aria-hidden="true" focusable="false" width="14" height="9" fill="currentColor">
                     <use href="img/sprite.svg#right"></use>
@@ -1149,11 +1158,13 @@
           </div>
         </section>
         <section class="footer-links">
+          <h2 class="visually-hidden">Навигация и ссылки.</h2>
           <div class="footer-links__container container">
             <a class="footer-links__logo" href="index.html">
               <svg aria-hidden="true" focusable="false" width="142" height="42" fill="currentColor">
                 <use href="img/sprite.svg#logo"></use>
               </svg>
+              <span class="visually-hidden">Логотип компании.</span>
             </a>
             <nav class="footer-links__navigation">
               <ul class="footer-links__navigation-list">
